@@ -6,21 +6,21 @@
 </head>
 <body>
   <header class="header">
-    <nav class="main-menu">
-      <ul class="main-menu__items">
-        <li class="main-menu__item"><a href="index.html">ИНФОРМАЦИЯ</a></li>
-        <li class="main-menu__item"><a href="form.html">ОСТАВИТЬ ОТЗЫВ</a></li>
-        <li class="main-menu__item"><a href="blog.html">БЛОГ ШЕРИФА</a></li>
-        <li class="main-menu__item">ГОСТИНИЦЫ</li>
+    <nav class="main-manu">
+      <ul class="main-manu__items">
+        <li class="main-manu__item">ИНФОРМАЦИЯ</li>
+        <li class="main-manu__item">ОСТАВИТЬ ОТЗЫВ</li>
+        <li class="main-manu__item">БЛОГ ШЕРИФА</li>
+        <li class="main-manu__item">ГОСТИНИЦЫ</li>
       </ul>
-      <div class="main-menu__icon">
-        <span></span>
-      </div>
+      <div class="main-menu__icon"></div>
     </nav>
-    <a class="logo" href="index.html">Sedona</a>
+    <div class="main-manu__logo"></div>
   </header>
   <div class="layout-center-wrapper">
-    <span class="content-header">SEDONA</span>
+    <div class="content-header">
+      <span>SEDONA</span>
+    </div>
     <div class="form-review">
       <h1 class="form-review__title">Оставьте свой отзыв</h1>
       <p class="form-review__content">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
@@ -60,22 +60,22 @@
         </div>
         <div class="form-item">
           <label for="duration">Длительность пребывания:</label>
-          <button class="form-item__btn--minus">-</button><input type="number" id="duration"><button class="form-item__btn--plus">+</button>
+          <input type="range" min="1" max="30" step="1" id="duration">
         </div>
         <div class="form-item">
           <label for="departure-date">Дата отъезда:</label>
-          <input type="text" id="departure-date" disabled>
+          <input type="text" id="departure-date">
         </div>
       </div><!--form-items-->
       <div class="form-items">
         <h2 class="form-items__title">Кол-во путешественников:</h2>
         <div class="form-item">
           <label for="count">Количество путешественников:</label>
-          <button class="form-item__btn--minus">-</button><input type="number" id="count"><button class="form-item__btn--plus">+</button>
+          <input type="range" min="1" max="30" step="1" id="count">
           <div class="persons-item">
             <div class="persons-item__count">
-              <span>№</span>
-              <span>1</span>
+              <h3>№</h3>
+              <p>1</p>
             </div>
             <div class="persons-item__surname">
               <label for="surname1">ФАМИЛИЯ:</label>
@@ -92,8 +92,8 @@
           </div><!--persons-item-->
           <div class="persons-item">
             <div class="persons-item__count">
-              <span>№</span>
-              <span>2</span>
+              <h3>№</h3>
+              <p>2</p>
             </div>
             <div class="persons-item__surname">
               <label for="surname2">ФАМИЛИЯ:</label>
@@ -131,50 +131,23 @@
       </div><!--form-items-->
       <div class="form-items">
         <h2 class="form-items__title">ЗАГРУЗИТЕ ФОТОГРАФИИ:</h2>
-        <input type="file" id="img" accept="image/jpeg,image/png,image/gif">
-        <label class="button" for="img">ВЫБРАТЬ ФОТОГРАФИИ</label>
-        <figure class="form-items__photo">
-          <a href="#" title="Удалить"></a>
-          <img src="">
-        </figure>
-        <figure class="form-items__photo">
-          <a href="#" title="Удалить"></a>
-          <img src="">
-        </figure>
-        <figure class="form-items__photo">
-          <a href="#" title="Удалить"></a>
-          <img src="">
-        </figure>
-        <figure class="form-items__photo">
-          <a href="#" title="Удалить"></a>
-          <img src="">
-        </figure>
-        <figure class="form-items__photo">
-          <a href="#" title="Удалить"></a>
-          <img src="">
-        </figure>
-        <figure class="form-items__photo">
-          <a href="#" title="Удалить"></a>
-          <img src="">
-        </figure>
-        <figure class="form-items__photo">
-          <a href="#" title="Удалить"></a>
-          <img src="">
-        </figure>
+        <p><input type="file" name="img" accept="image/jpeg,image/png,image/gif">
+        <input type="submit" value="ВЫБРАТЬ ФОТОГРАФИИ"></p>
+        <div class="form-items__photo"></div>
       </div><!--form-items-->
     </form>
     <input type="submit" value="ОТПРАВИТЬ ОТЗЫВ">
   </div>
   <footer class="footer">
-    <span class="footer-title">#visitsedona</span>
-    <div class="social">
-      <ul class="social__items">
-        <li><a class="social__items--tw" href="#">twitter</a></li>
-        <li><a class="social__items--fb" href="#">facebook</a></li>
-        <li><a class="social__items--yt" href="#">youtube</a></li>
+    <h1 class="footer-title">#visitsedona</h1>
+    <div class="soctial">
+      <ul class="soctial__items">
+        <li><a class="soctial__items--tw" href="#"></a></li>
+        <li><a class="soctial__items--fb" href="#"></a></li>
+        <li><a class="soctial__items--yt" href="#"></a></li>
       </ul>
     </div>
-    <a class="copyright" href="#">Разработано</a>
+    <div class="copyright">Разработано<a href="http://htmlacademy.ru/">htmlacademy.ru</a></div>
   </footer>
 </body>
 </html>
