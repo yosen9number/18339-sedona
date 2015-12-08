@@ -1,0 +1,51 @@
+.form-item {
+  label {
+    margin-left: 20px;
+  }
+}
+input {
+  height: 20px;
+  padding: 20px;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  background: @lighten-grey;
+}
+input[type='text'] {
+  display: block;
+  width: 85%;
+  margin-bottom: 15px;
+}
+input[type='radio'] {
+  display: none;
+}
+input[type='radio']~label {
+  display: block;
+  font-size: @s-title;
+  font-weight: bold;
+  text-transform: none;
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+input[type='radio']~label::before {
+  content: '';
+  position: relative;
+  top: -10px;
+  left: -20px;
+  display: block;
+  float: left;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 16px solid @lighten-grey;
+  background-color: @lighten-grey;
+}
+input[type='number'] {
+  width: 100px;
+}
+input[type='number']::before {
+  content: 'дн.';
+  color: @darken-grey;
+}

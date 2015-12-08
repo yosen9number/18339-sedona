@@ -3,15 +3,20 @@
   <head>
     <meta charset="utf-8">
     <title>Sedona</title>
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="header">
       <nav class="main-menu">
         <ul class="main-menu__items">
-          <li class="main-menu__item"><a href="index.html">ИНФОРМАЦИЯ</a></li>
+          <li class="main-menu__item">
+            <a href="index.html">ИНФОРМАЦИЯ</a>
+            <button class="main-menu__close">&times;</button>
+          </li>
           <li class="main-menu__item"><a href="form.html">ОСТАВИТЬ ОТЗЫВ</a></li>
           <li class="main-menu__item"><a href="blog.html">БЛОГ ШЕРИФА</a></li>
-          <li class="main-menu__item">ГОСТИНИЦЫ</li>
+          <li class="main-menu__item"><a href="#">ГОСТИНИЦЫ</a></li>
         </ul>
         <div class="main-menu__icon">
           <span></span>
@@ -19,50 +24,52 @@
       </nav>
       <a class="logo" href="index.html">Sedona</a>
     </header>
+    <span class="content-header--index">Sedona</span>
     <div class="layout-center-wrapper">
-      <span class="content-header">SEDONA</span>
       <div class="index-header">
         <h1 class="index-header__title">СЕДОНА — небольшой городок в Аризоне, залуживающий большего!</h1>
         <p class="index-header__content">Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</p>
       </div><!--index-header-->
-        <div class="main-reason">
-          <h2 class="main-reason__title">НАСТОЯЩИЙ ГОРОДОК</h2>
-          <p class="main-reason__count">-№1-</p>
-          <p class="main-reason__content">СЕДОНА НЕ АТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
-          <div class="main-reason__img"></div>
-          <div class="main-item">
-            <h3 class="main-item__title">Жилье</h3>
-            <p class="main-item__content">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
-          </div>
-          <div class="main-item">
-            <h3 class="main-item__title">ЕДА</h3>
-            <p class="main-item__content">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>
-          </div>
-          <div class="main-item">
-            <h3 class="main-item__title">СУВЕНИРЫ</h3>
-            <p class="main-item__content">Не только китайского, но и местного производства!</p>
-          </div>
-        </div><!--main-reason-->
+      <div class="main-reason">
+        <h2 class="main-reason__title">НАСТОЯЩИЙ ГОРОДОК</h2>
+        <p class="main-reason__count">&mdash; №1	&mdash;</p>
+        <p class="main-reason__content">СЕДОНА НЕ АТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
+      </div><!--main-reason-->
+      <div class="first-reason__img"></div>
+      <div class="main-items">
+        <div class="main-item">
+          <h3 class="main-item__title">Жилье</h3>
+          <p class="main-item__content">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+        </div>
+        <div class="main-item">
+          <h3 class="main-item__title">ЕДА</h3>
+          <p class="main-item__content">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>
+        </div>
+        <div class="main-item">
+          <h3 class="main-item__title">СУВЕНИРЫ</h3>
+          <p class="main-item__content">Не только китайского, но и местного производства!</p>
+        </div>
+      </div>
       <div class="main-reason">
         <h2 class="main-reason__title">ТАМ ЕСТЬ Мост дьявола</h2>
-        <p class="main-reason__count">-№2-</p>
+        <p class="main-reason__count">&mdash; №2 	&mdash;</p>
         <p class="main-reason__content">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
-        <div class="main-reason__img"></div>
       </div><!--main-reason-->
+      <div class="second-reason__img"></div>
       <section class="other-reasons">
         <div class="other-reason">
           <h2 class="other-reason__title">НЕБОЛЬШАЯ ПЛОЩАДЬ</h2>
-          <p class="other-reason__count">-№3-</p>
+          <p class="other-reason__count">&mdash; №3 &mdash;</p>
           <p class="other-reason__content">ВСЕ достопримечательности находятся очень близко</p>
         </div><!--other-reason-->
         <div class="other-reason">
           <h2 class="other-reason__title">КРАСИВАЯ ДОРОГА</h2>
-          <p class="other-reason__count">-№4-</p>
+          <p class="other-reason__count">&mdash; №4 &mdash;</p>
           <p class="other-reason__content">ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем НЕ СКУЧНО!</p>
         </div><!--other-reason-->
         <div class="other-reason">
           <h2 class="other-reason__title">МАЛО ТУРИСТОВ</h2>
-          <p class="other-reason__count">-№5-</p>
+          <p class="other-reason__count">&mdash; №5 &mdash;</p>
           <p class="other-reason__content">Большинство едет в гранд каньон и толпится там</p>
         </div><!--other-reason-->
       </section>
@@ -70,16 +77,16 @@
         <h2 class="check-in__title">ЗАИНТЕРЕСОВАЛИСЬ?</h2>
         <p class="check-in__content">Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в седоне</p>
         <a class="check-in__btn" href="#">НАЙТИ гостиницу</a>
-        <div class="map"></div>
       </div><!--check-in-->
+      <div class="map"></div>
     </div><!--layout-center-wrapper-->
     <footer class="footer">
-      <span class="footer-title">#visitsedona</span>
+      <span class="footer__title">#visitsedona</span>
       <div class="social">
         <ul class="social__items">
-          <li><a class="social__items--tw" href="#">twitter</a></li>
-          <li><a class="social__items--fb" href="#">facebook</a></li>
-          <li><a class="social__items--yt" href="#">youtube</a></li>
+          <li class="social__items--tw"><a href="#">twitter</a></li>
+          <li class="social__items--fb"><a href="#">facebook</a></li>
+          <li class="social__items--yt"><a href="#">youtube</a></li>
         </ul>
       </div>
       <a class="copyright" href="#">Разработано</a>
