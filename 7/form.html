@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Оставьте свой отзыв</title>
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href="css/style.css" rel="stylesheet">
+  <base href="https://up-htmlacademy.github.io/18339-sedona/7/">
+</head>
+<body>
+  <header class="header">
+    <nav class="main-menu">
+      <ul class="main-menu__items">
+        <li class="main-menu__item">
+          <a href="index.html">ИНФОРМАЦИЯ</a>
+          <button class="main-menu__close">&times;</button>
+        </li>
+        <li class="main-menu__item"><a href="form.html">ОСТАВИТЬ ОТЗЫВ</a></li>
+        <li class="main-menu__item"><a href="blog.html">БЛОГ ШЕРИФА</a></li>
+        <li class="main-menu__item"><a href="#">ГОСТИНИЦЫ</a></li>
+      </ul>
+      <div class="main-menu__icon">
+        <span></span>
+      </div>
+    </nav>
+    <a class="logo" href="index.html">Sedona</a>
+  </header>
+  <span class="content-header">SEDONA</span>
+  <div class="layout-center-wrapper">
+    <div class="form-review">
+      <h1 class="form-review__title">Оставьте свой отзыв</h1>
+      <p class="form-review__content">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+    </div><!--form-review-->
+    <form enctype="multipart/form-data">
+      <div class="form-items">
+        <h2 class="form-items__title">Представьтесь, пожалуйста:</h2>
+        <div class="form-item">
+          <label class="required" for="surname">ФАМИЛИЯ:</label>
+          <input type="text" id="surname" required>
+        </div>
+        <div class="form-item">
+          <label class="required" for="name">ИМЯ:</label>
+          <input type="text" id="name" required>
+        </div>
+        <div class="form-item">
+          <label for="second-name">Отчество:</label>
+          <input type="text" id="second-name">
+        </div>
+      </div><!--form-items-->
+      <div class="form-items">
+        <h2 class="form-items__title">Ваше общее впечатление:</h2>
+        <div class="form-item">
+          <input type="radio" id="positive">
+          <label for="positive">Скорее положительное</label>
+        </div>
+        <div class="form-item">
+          <input type="radio" id="negative">
+          <label for="negative">Скорее отрицательное</label>
+        </div>
+      </div><!--form-items-->
+      <div class="form-items">
+        <h2 class="form-items__title">Даты вашей поездки:</h2>
+        <div class="form-item">
+          <label class="required" for="arrival-date">Дата приезда:</label>
+          <input type="text" id="arrival-date" required>
+        </div>
+        <div class="form-item">
+          <label class="required" for="duration">Длительность пребывания:</label>
+          <button class="form-item__btn--minus">-</button><input type="number" id="duration"><button class="form-item__btn--plus">+</button>
+        </div>
+        <div class="form-item">
+          <label class="required" for="departure-date">Дата отъезда:</label>
+          <input type="text" id="departure-date" disabled>
+        </div>
+      </div><!--form-items-->
+      <div class="form-items">
+        <h2 class="form-items__title">Кол-во путешественников:</h2>
+        <div class="form-item">
+          <label class="required" for="count">Количество путешественников:</label>
+          <button class="form-item__btn--minus">-</button><input type="number" id="count"><button class="form-item__btn--plus">+</button>
+          <div class="persons-item">
+            <div class="persons-item__count">
+              <span>№</span>
+              <span>1</span>
+            </div>
+            <div class="persons-item__surname">
+              <label class="required" for="surname1">ФАМИЛИЯ:</label>
+              <input type="text" id="surname1" required>
+            </div>
+            <div class="form-item">
+              <label class="required" for="name1">ИМЯ:</label>
+              <input type="text" id="name1" required>
+            </div>
+            <div class="form-item">
+              <label for="second-name1">Отчество:</label>
+              <input type="text" id="second-name1">
+            </div>
+          </div><!--persons-item-->
+          <div class="persons-item">
+            <div class="persons-item__count">
+              <span>№</span>
+              <span>2</span>
+            </div>
+            <div class="persons-item__surname">
+              <label class="required" for="surname2">ФАМИЛИЯ:</label>
+              <input type="text" id="surname2" required>
+            </div>
+            <div class="form-item">
+              <label class="required" for="name2">ИМЯ:</label>
+              <input type="text" id="name2" required>
+            </div>
+            <div class="form-item">
+              <label for="second-name2">Отчество:</label>
+              <input type="text" id="second-name2">
+            </div>
+          </div><!--persons-item-->
+        </div><!--form-item-->
+      </div><!--form-items-->
+      <div class="form-items">
+        <h2 class="form-items__title">Посещенные достопримечательности:</h2>
+        <div class="form-item">
+          <input type="checkbox" id="bridge">
+          <label for="bridge">Мост Дьявола</label>
+        </div>
+        <div class="form-item">
+          <input type="checkbox" id="park">
+          <label for="park">Слайд-парк</label>
+        </div>
+        <div class="form-item">
+          <input type="checkbox" id="mount">
+          <label for="mount">Гора-Колокол</label>
+        </div>
+        <div class="form-item">
+          <input type="checkbox" id="rock">
+          <label for="rock">Красные скалы</label>
+        </div>
+      </div><!--form-items-->
+      <div class="form-items">
+        <h2 class="form-items__title">ЗАГРУЗИТЕ ФОТОГРАФИИ:</h2>
+        <input type="file" id="img" accept="image/jpeg,image/png,image/gif">
+        <label class="button" for="img">ВЫБРАТЬ ФОТОГРАФИИ</label>
+        <figure class="form-items__photo">
+          <a href="#" title="Удалить"></a>
+          <img src="">
+        </figure>
+        <figure class="form-items__photo">
+          <a href="#" title="Удалить"></a>
+          <img src="">
+        </figure>
+        <figure class="form-items__photo">
+          <a href="#" title="Удалить"></a>
+          <img src="">
+        </figure>
+        <figure class="form-items__photo">
+          <a href="#" title="Удалить"></a>
+          <img src="">
+        </figure>
+        <figure class="form-items__photo">
+          <a href="#" title="Удалить"></a>
+          <img src="">
+        </figure>
+        <figure class="form-items__photo">
+          <a href="#" title="Удалить"></a>
+          <img src="">
+        </figure>
+        <figure class="form-items__photo">
+          <a href="#" title="Удалить"></a>
+          <img src="">
+        </figure>
+      </div><!--form-items-->
+    </form>
+    <input type="submit" value="ОТПРАВИТЬ ОТЗЫВ">
+  </div>
+  <footer class="footer">
+    <span class="footer__title">#visitsedona</span>
+    <div class="social">
+      <ul class="social__items">
+        <li class="social__items--tw"><a href="#">twitter</a></li>
+        <li class="social__items--fb"><a href="#">facebook</a></li>
+        <li class="social__items--yt"><a href="#">youtube</a></li>
+      </ul>
+    </div>
+    <a class="copyright" href="#">Разработано</a>
+  </footer>
+</body>
+</html>
