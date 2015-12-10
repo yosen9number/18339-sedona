@@ -1,0 +1,44 @@
+.blog-news {
+  margin: 0 20px;
+  padding-top: 15px;
+  padding-bottom: 35px;
+  border-top: 2px solid @border-color;
+  &__title {
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 26px;
+  }
+  &__content {
+    margin-bottom: 22px;
+    padding: 0 5px;
+    text-align: center;
+    line-height: 21px;
+  }
+  &__date,
+  &__section{
+    color: @grey;
+    text-align: left;
+    text-decoration: none;
+    font-style: italic;
+  }
+  &__date {
+    margin-right: 24px;
+  }
+  &__date::before,
+  &__section::before{
+    content: '';
+    display: inline-block;
+    margin-left: 4px;
+    margin-right: 9px;
+    width: 11px;
+    height: 11px;
+    background: url('../img/sprite-blog.png');
+  }
+  &__section::before {
+    background-position: right;
+  }
+}
+.blog-news__title a {
+  text-decoration: none;
+  color: #000;
+}

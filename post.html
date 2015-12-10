@@ -3,15 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Внимание! сбежала моя домашняя анаконда</title>
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
   <header class="header">
-    <nav class="main-manu">
-      <ul class="main-manu__items">
-        <li class="main-manu__item"><a href="index.html">ИНФОРМАЦИЯ</a></li>
-        <li class="main-manu__item"><a href="form.html">ОСТАВИТЬ ОТЗЫВ</a></li>
-        <li class="main-manu__item"><a href="blog.html">БЛОГ ШЕРИФА</a></li>
-        <li class="main-manu__item">ГОСТИНИЦЫ</li>
+    <nav class="main-menu">
+      <ul class="main-menu__items">
+        <li class="main-menu__item">
+          <a href="index.html">ИНФОРМАЦИЯ</a>
+          <button class="main-menu__close">&times;</button>
+        </li>
+        <li class="main-menu__item"><a href="form.html">ОСТАВИТЬ ОТЗЫВ</a></li>
+        <li class="main-menu__item"><a href="blog.html">БЛОГ ШЕРИФА</a></li>
+        <li class="main-menu__item"><a href="#">ГОСТИНИЦЫ</a></li>
       </ul>
       <div class="main-menu__icon">
         <span></span>
@@ -19,11 +24,11 @@
     </nav>
     <a class="logo" href="index.html">Sedona</a>
   </header>
+  <span class="content-header">SEDONA</span>
   <div class="layout-center-wrapper">
-    <span class="content-header">SEDONA</span>
     <div class="blog">
       <h1 class="blog__title">БЛОГ ШЕРИФА</h1>
-      <p class="blog__content">Седона удивительный город! Горы здесь красного цвета, а местный шериф ведет блог и общается на форумах.</p>
+      <p class="blog__content">Седона удивительный город! Горы<br> здесь красного цвета,<br> а местный шериф ведет блог и<br> общается на форумах.</p>
     </div><!--blog-->
     <article>
       <section class="post-preview">
@@ -49,9 +54,9 @@
       <section class="post">
         <h2 class="post__title">Предостережение</h2>
         <p class="post__content">не пытайтесь убить змею, если увидите! Помните, что она тоже живое существо, хоть и выглядит не очень приятно. вот цитата, которая мне очень нравится:</p>
-        <blockquote class="post-quote">
-          <p class="post-quote__content">Самый свирепый из зверей — теперь мы знаем — это человек, он убивает даже если не голоден.</p>
-          <span class="post-quote__autor">Адриано Челентано</span>
+        <blockquote class="post__quote">
+          <p>Самый свирепый из зверей — теперь мы знаем — это человек, он убивает даже если не голоден.</p>
+          <span>Адриано Челентано</span>
         </blockquote>
       </section><!--post-->
     </article>
@@ -62,12 +67,12 @@
     </div>
   </div><!--layout-center-wrapper-->
   <footer class="footer">
-    <span class="footer-title">#visitsedona</span>
+    <span class="footer__title">#visitsedona</span>
     <div class="social">
       <ul class="social__items">
-        <li><a class="social__items--tw" href="#">twitter</a></li>
-        <li><a class="social__items--fb" href="#">facebook</a></li>
-        <li><a class="social__items--yt" href="#">youtube</a></li>
+        <li class="social__items--tw"><a href="#">twitter</a></li>
+        <li class="social__items--fb"><a href="#">facebook</a></li>
+        <li class="social__items--yt"><a href="#">youtube</a></li>
       </ul>
     </div>
     <a class="copyright" href="#">Разработано</a>
