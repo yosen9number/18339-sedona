@@ -1,0 +1,135 @@
+.form-item {
+  label {
+    margin-left: 20px;
+  }
+  input {
+    height: 20px;
+    margin-top: 10px;
+    padding: 20px;
+    font-size: @s-title;
+    font-weight: bold;
+    border: none;
+    background: @lighten-grey;
+  }
+  &__choice {
+    display: block;
+    padding: 10px 0;
+    margin-bottom: 22px;
+    font-size: @s-title;
+    font-weight: bold;
+    text-transform: none;
+  }
+  &__photo {
+    display: block;
+    width: 70px;
+    height: 70px;
+    background: #fbfbfb;
+  }
+}
+
+
+input[type='text'] {
+  display: block;
+  width: 85%;
+  margin-bottom: 15px;
+}
+
+input[type='radio'] {
+  display: none;
+  &~label::before {
+    content: '';
+    position: relative;
+    top: -15px;
+    left: -20px;
+    display: block;
+    float: left;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 18px solid @lighten-grey;
+    background: @lighten-grey;
+  }
+  &:checked~label::before {
+    background-color: black;
+  }
+}
+
+.form-item__btn {
+  display: block;
+  margin: 10px 0 22px;
+  text-align: center;
+  &--minus,
+  &--plus {
+    display: inline-block;
+    vertical-align: middle;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: @darken-grey;
+    border: none;
+  }
+}
+input[type='number'] {
+  display: inline-block;
+  width: 37%;
+  margin: 0 1.5%;
+  vertical-align: middle;
+  text-decoration: none;
+  -moz-appearance:textfield;
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+}
+
+input[type='checkbox'] {
+   display: none;
+  &~label {
+    margin-bottom: 35px;
+  }
+  &~label::before {
+    content: '';
+    position: relative;
+    top: -15px;
+    left: -20px;
+    display: block;
+    float: left;
+    width: 56px;
+    height: 56px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    background: @lighten-grey;
+  }
+  &:checked~label::before {
+    content: '';
+    background-image: url("../img/check.png")
+  }
+}
+
+figure {
+  margin: 0 30px 0 0;
+  display: inline-block;
+  a {
+    position: relative;
+    top: 15px;
+    left: 20px;
+    display: block;
+    width: 30px;
+    cursor: pointer;
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+    text-decoration: none;
+    color: @darken-grey;
+    border-radius: 50%;
+    background-color: @lighten-grey;
+  }
+  &:nth-child(3),
+  &:nth-child(6){
+    margin: 0;
+  }
+}
