@@ -1,4 +1,5 @@
 .post-preview {
+  padding: 0 20px;
   &__title {
     margin-bottom: 20px;
     text-align: center;
@@ -12,5 +13,28 @@
     font-size: 18px;
     line-height: 26px;
     color: #766357;
+  }
+  &__date,
+  &__section{
+    color: @grey;
+    text-align: left;
+    text-decoration: none;
+    font-style: italic;
+  }
+  &__date {
+    margin-right: 24px;
+  }
+  &__date::before,
+  &__section::before{
+    content: '';
+    display: inline-block;
+    margin-left: 4px;
+    margin-right: 9px;
+    width: 11px;
+    height: 11px;
+    background: url('../img/sprite-blog.png');
+  }
+  &__section::before {
+    background-position: right;
   }
 }
