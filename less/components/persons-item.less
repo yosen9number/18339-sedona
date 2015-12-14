@@ -26,6 +26,46 @@
 }
 .persons-item__content {
   display: block;
-  width: 200px;
+  width: 75%;
   margin-left: 70px;
+}
+
+@media(min-width: 480px) {
+  .persons-item {
+    &--left {
+      margin-right: 7px;
+    }
+    &--right {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    &__content {
+      margin: 0 auto;
+    }
+    input[type='text'] {
+      width: 160px;
+    }
+  }
+}
+@media(min-width: 1200px) {
+  .persons-item {
+    &--left {
+      margin-right: 7px;
+    }
+    &--right {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    &__content {
+      margin: 0 auto;
+    }
+    input[type='text'] {
+      width: 240px;
+    }
+    &__content:first-child input[type='text']{
+      width: 180px;
+    }
+  }
 }
