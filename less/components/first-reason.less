@@ -1,4 +1,17 @@
 .first-reason__img {
-  height: 255px;
-  background: url("../img/bg_r1.jpg");
+  mi -height: 256px;
+  background: center url("../img/photo-city@1x.jpg") no-repeat;
+  background-size: cover;
+}
+
+@media @tablet{
+  .first-reason {
+    display: flex;
+    flex-direction: row;
+    &__img {
+      width: 67%;
+      background: center 50% url("../img/photo-city@2x.jpg") no-repeat;
+      background-size: cover;
+    }
+  }
 }

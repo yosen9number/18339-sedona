@@ -58,7 +58,7 @@
       return element.figure != figure;
     });
 
-    div.parentNode.removeChild(div);
+    figure.parentNode.removeChild(figure);
   }
 
   form.addEventListener("submit", function(event){
@@ -70,7 +70,7 @@
 
     queue.forEach(function(element) {
       data.append("images", element.file);
-    });
+    }); /*?*/
 
     xhr.open("post", "https://echo.htmlacademy.ru/adaptive?" + time);
     xhr.addEventListener("readystatechange", function(){
@@ -96,6 +96,7 @@
       var imgTemplate = document.querySelector("#image-template").innerHTML;
       if (file.type.match(/image.*/)){
         var reader = new FileReader();
+
 
         reader.addEventListener("load", function(event){
 
