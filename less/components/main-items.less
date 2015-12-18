@@ -1,14 +1,11 @@
 .main-items {
-  padding: 10px 20px;
+  padding: 10px 6.2%;
   text-align: left;
   background-color: #fff;
-  .main-item:first-child {
-    background: url("../img/icon_home.png") no-repeat ;
-  }
-  .main-item:nth-child(2) {
-    background: url("../img/icon_burg.png") no-repeat ;
-  }
-  .main-item:last-child {
-    background: url("../img/icon_prize.png") no-repeat ;
+}
+@media @tablet {
+  .main-items {
+    display: flex;
+    padding: 0;
   }
 }

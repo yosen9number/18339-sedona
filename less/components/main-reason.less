@@ -1,5 +1,5 @@
 .main-reason {
-  padding: 25px 20px;
+  padding: 25px 6.2%;
   text-align: center;
   color: #fff;
   background-color: @main-color;
@@ -10,7 +10,26 @@
   &__count {
     margin: 0;
   }
+  &__count::before,
+  &__count::after {
+    content: '—';
+    margin: 0 4px;
+  }
   &__content {
     line-height: 22px;
+  }
+}
+@media @tablet {
+  .main-reason {
+    width: 21.3%;
+    min-height: 206px;
+    padding: 25px 6%;
+    &__title {
+      margin-bottom: 5px;
+      font-size: @m-title;
+    }
+    &__count {
+      margin-bottom: 20px;
+    }
   }
 }
