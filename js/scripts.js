@@ -1,6 +1,6 @@
 (function() {
-  var navOpen = document.querySelector (".main-menu__icon");
-  var navClose = document.querySelector (".main-menu__close");
+  var navOpen = document.querySelector(".main-menu__icon");
+  var navClose = document.querySelector(".main-menu__close");
   var mainNav = document.querySelector(".main-menu__items");
 
   navOpen.addEventListener("click", function(event){
@@ -48,7 +48,7 @@
     return;
   }
   var queue = [];
-  var form = document.querySelector(".form");
+  var form = document.querySelector(".main-form");
 
   function removePreview(figure) {
     queue = queue.filter(function(element) {
@@ -79,7 +79,7 @@
     form.reset();
   });
 
-    form.querySelector(".form-items__file").addEventListener("change", function() {
+    document.querySelector(".form-items__file").addEventListener("change", function() {
 
       var files = this.files;
       for (var i = 0; i < files.length; i++) {
