@@ -1,20 +1,24 @@
 .index-header {
   text-align: center;
   &__title {
-    margin: 30px 24px;
+    margin: 30px 7.5%;
     font-size: @s-title;
     line-height: 25px;
   }
   &__content {
     line-height: 25px;
-    margin: 0 24px 29px 24px;
+    margin: 0 7.5% 29px;
   }
 }
-.index-header::after{
-  content: '';
-  display: block;
-  height: 25px;
-  background-image:
-    linear-gradient(5deg, @main-color 30%, transparent 30%),
-    linear-gradient(355deg, @main-color 30%, transparent 30%);
+
+@media @tablet {
+  .index-header {
+    &__title {
+      font-size: @m-title;
+    }
+    &__content {
+      line-height: 20px;
+      margin-bottom: 55px;
+    }
+  }
 }

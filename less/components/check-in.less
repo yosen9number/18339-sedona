@@ -1,5 +1,5 @@
 .check-in {
-  padding: 10px 20px;
+  padding: 10px 6.2%;
   text-align: center;
   &__title {
     font-size: @m-title;
@@ -10,12 +10,28 @@
   }
   &__btn{
     display: block;
-    padding: 15px;
+    margin: auto;
+    padding: 15px 0;
     color: white;
     font-size: @m-title;
     font-weight: bold;
     text-decoration: none;
     letter-spacing: 1px;
     background-color: @main-color;
+  }
+}
+
+@media @tablet {
+  .check-in {
+
+    &__title {
+      font-size: 30px;
+    }
+    &__content {
+      padding: 0 20%;
+    }
+    &__btn {
+      max-width: 458px;
+    }
   }
 }

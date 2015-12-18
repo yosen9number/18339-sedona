@@ -1,5 +1,5 @@
 .form-items {
-  padding: 0 20px 10px;
+  padding: 0 6.2% 10px;
   border-top: 1px solid @border-color;
   &__title {
     margin-top: 18px;
@@ -7,10 +7,10 @@
     text-align: center;
     font-size: @s-title;
   }
-  &__button {
+  &__image-download {
     display: block;
     height: 20px;
-    width: 280px;
+    max-width: 480px;
     margin: 10px auto 25px;
     padding: 20px 0;
     text-align: center;
@@ -19,9 +19,60 @@
     font-weight: bold;
     color: @darken-grey;
     border: none;
-    background: @lighten-grey;
+    background: @grey-color;
+  }
+  &__file{
+     display: none;
   }
 }
-input [type='file'] {
-  display: none;
+
+
+@media @tablet {
+  .form-items {
+    padding: 0 7.8%;
+    border: none;
+    &__title {
+      padding-top: 35px;
+      font-size: @m-title;
+    }
+    &__title::before {
+      content: '';
+      position: relative;
+      display: block;
+      float: left;
+      top:10px;
+      left: 0;
+      width: 17%;
+      height: 1px;
+      background: @darken-grey;
+
+    }
+    &__title::after {
+      content: '';
+      position: relative;
+      display: block;
+      float: right;
+      top:10px;
+      left: 0;
+      width: 17%;
+      height: 1px;
+      background: @darken-grey;
+
+    }
+    &__content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    &__image-download {
+      min-width: 460px;
+    }
+  }
+
+}
+@media @desktop {
+  .form-items__button {
+      min-width: 100%;
+  }
 }

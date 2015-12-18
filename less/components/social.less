@@ -1,18 +1,21 @@
-@main-color: #81b3d2;
-
 .social {
   margin-top: 35px;
   margin-right: 40px;
-  &__items li{
+  text-align: center;
+  li{
     display: inline-block;
     margin-right: 2px;
-    width: 46px;
-    height: 48px;
     list-style: none;
+    text-align: center;
+    vertical-align: middle;
     background-color: @main-color;
   }
   a {
+    display: block;
+    opacity: 0;
     font-size: 0;
+    width: 46px;
+    height: 48px;
   }
   &__items--tw {
     background: left url('../img/sprite.png') no-repeat;
@@ -23,5 +26,17 @@
   &__items--yt {
     background: right url('../img/sprite.png') no-repeat;
   }
+}
+
+@media @tablet{
+  .social {
+    margin-top: 0;
+    margin-right: 0;
+    width: 200px;
+    ul{
+      padding: 0;
+    }
+  }
 
 }
+
