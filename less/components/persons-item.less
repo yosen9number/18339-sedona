@@ -21,7 +21,7 @@
     line-height: 20px;
     font-weight: bold;
     border: none;
-    background: @lighten-grey;
+    background: @grey-color;
   }
 }
 .persons-item__content {
@@ -30,7 +30,7 @@
   margin-left: 70px;
 }
 
-@media(min-width: 480px) {
+@media @tablet {
   .persons-item {
     &--left {
       margin-right: 7px;
@@ -48,7 +48,7 @@
     }
   }
 }
-@media(min-width: 1200px) {
+@media @desktop {
   .persons-item {
     &--left {
       margin-right: 7px;
