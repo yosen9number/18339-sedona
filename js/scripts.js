@@ -1,13 +1,15 @@
-var navOpen = document.querySelector (".main-menu__icon");
-var navClose = document.querySelector (".main-menu__close");
-var mainNav = document.querySelector(".main-menu__items");
+(function() {
+  var navOpen = document.querySelector (".main-menu__icon");
+  var navClose = document.querySelector (".main-menu__close");
+  var mainNav = document.querySelector(".main-menu__items");
 
-navOpen.addEventListener("click", function(event){
+  navOpen.addEventListener("click", function(event){
     mainNav.classList.add("main-menu__items--open");
-});
-navClose.addEventListener("click", function(event){
+  });
+  navClose.addEventListener("click", function(event){
     mainNav.classList.remove("main-menu__items--open");
-});
+  });
+})();
 
 (function() {
   var elements = document.querySelectorAll(".form-item__btn");
@@ -41,7 +43,7 @@ navClose.addEventListener("click", function(event){
   }
 })();
 
-(function(){
+(function() {
   if(!("FormData" in window)){
     return;
   }
