@@ -9,7 +9,7 @@
     font-size: @s-title;
     font-weight: bold;
     border: none;
-    background: @lighten-grey;
+    background: @grey-color;
   }
   &__choice {
     display: block;
@@ -19,12 +19,6 @@
     font-weight: bold;
     text-transform: none;
   }
-  &__photo {
-    display: block;
-    width: 70px;
-    height: 70px;
-    background: #fbfbfb;
-  }
 }
 
 
@@ -32,6 +26,13 @@ input[type='text'] {
   display: block;
   width: 85%;
   margin-bottom: 15px;
+  &:hover {
+    background-color: @grey-color_hvr;
+  }
+  &:active{
+    box-shadow: inset 0 0 0 3px @grey-color_hvr;
+    background-color: #fff;
+  }
 }
 
 input[type='radio'] {
@@ -47,11 +48,27 @@ input[type='radio'] {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    border: 18px solid @lighten-grey;
-    background: @lighten-grey;
+    border: 18px solid @grey-color;
+    background: @grey-color;
   }
   &:checked~label::before {
     background-color: black;
+  }
+  &~label:hover::before {
+    border: 18px solid @grey-color_hvr;
+    background-color: @grey-color_hvr;
+  }
+  &~label:active::before  {
+    border: 18px solid @grey-color_down;
+    background-color: @grey-color_down;
+  }
+  &:checked~label:hover::before {
+    border: 18px solid @grey-color_hvr;
+    background-color: black;
+  }
+  &:checked~label:active::before {
+    border: 18px solid @grey-color_down;
+    background-color: @grey_down;
   }
 }
 
@@ -102,11 +119,23 @@ input[type='checkbox'] {
     cursor: pointer;
     text-align: center;
     border-radius: 5px;
-    background: @lighten-grey;
+    background: @grey-color;
   }
   &:checked~label::before {
     content: '';
-    background-image: url("../img/check.png")
+    background: left url("../img/check.png")no-repeat @grey-color;
+  }
+  &~label:hover::before {
+    background: @grey-color_hvr;
+  }
+  &~label:active::before  {
+    background: @grey-color_down;
+  }
+  &:checked~label:hover::before {
+    background: left url("../img/check.png")no-repeat @grey-color_hvr;
+  }
+  &:checked~label:active::before {
+    background: right url("../img/check.png")no-repeat @grey-color_down;
   }
 }
 
@@ -126,11 +155,11 @@ figure {
     text-decoration: none;
     color: @darken-grey;
     border-radius: 50%;
-    background-color: @lighten-grey;
+    background-color: @grey-color;
   }
 }
 
-@media(min-width: 480px) {
+@media @tablet {
   label {
   margin: auto;
   padding-left: 6.2%;
@@ -140,11 +169,7 @@ figure {
     &__btn {
       width: 176px;
       margin: 10px auto 22px;
-      background: @lighten-grey;
-    }
-    &__photo {
-      width: 140px;
-      height: 140px;
+      background: @grey-color;
     }
     &__count-label {
       padding-left: 28%;
@@ -158,7 +183,6 @@ figure {
     margin: 0;
   }
   input[type='checkbox'] {
-    display: none;
     &~label {
       margin-bottom: 35px;
       padding: 10px 50px;
@@ -166,21 +190,9 @@ figure {
     &~label:last-child::before {
     }
   }
-  figure {
-    a {
-      position: relative;
-      top: 25px;
-      left: 110px;
-      width: 50px;
-      cursor: pointer;
-      font-size: 50px;
-      line-height: 50px;
-      font-weight: normal;
-    }
-  }
 }
 
-@media(min-width: 1200px) {
+@media @desktop {
   .form-item {
     &__btn {
       width: 280px;
@@ -206,20 +218,6 @@ figure {
     &~label {
       margin-bottom: 35px;
       padding: 30px 0;
-    }
-    &~label:last-child::before {
-    }
-  }
-  figure {
-    a {
-      position: relative;
-      top: 25px;
-      left: 110px;
-      width: 50px;
-      cursor: pointer;
-      font-size: 50px;
-      line-height: 50px;
-      font-weight: normal;
     }
   }
 }
