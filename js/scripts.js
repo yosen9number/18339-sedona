@@ -21,12 +21,14 @@
     var minus = parent.querySelector(".form-item__btn--minus");
     var plus = parent.querySelector(".form-item__btn--plus");
 
-    minus.addEventListener("click", function(event) {
+    minus.addEventListener("click", function() {
       changeNumber(false);
+      console.log('нажали -');
     });
 
     plus.addEventListener("click", function() {
       changeNumber(true);
+      console.log('нажали +');
     });
 
     function changeNumber(operation) {
@@ -42,6 +44,7 @@
     }
   }
 })();
+
 
 (function() {
   if(!("FormData" in window)){
