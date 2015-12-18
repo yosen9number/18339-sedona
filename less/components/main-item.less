@@ -3,10 +3,53 @@
   &__title {
     padding-top: 10px;
     font-size: @s-title;
-    margin-left: 50px;
+    margin-left: 16%;
   }
   &__content{
     line-height: 20px;
-    margin-left: 50px;
+    margin-left: 16%;
+  }
+  &:first-child {
+    background: url("../img/icon-house.svg") no-repeat ;
+    background-size: 12%;
+}
+  &:nth-child(2) {
+    background: url("../img/icon-burger.svg") no-repeat;
+    background-size: 12%;
+  }
+  &:last-child {
+    background: url("../img/icon-gift.svg") no-repeat;
+    background-size: 12%;
+  }
+}
+
+@media(min-width: 480px) {
+  .main-item {
+    width: 22.3%;
+    min-height: 256px;
+    margin: 0;
+    padding: 0 6.5%;
+    text-align: center;
+    &__title {
+      padding-top: 124px;
+      margin-bottom: 20px;
+      margin-left: 0;
+      font-size: @m-title;
+
+    }
+    &__content {
+      line-height: 20px;
+      margin-bottom: 65px;
+      margin-left: 0;
+    }
+    &:first-child {
+      background: center 64px url("../img/icon-house.svg") no-repeat;
+    }
+    &:nth-child(2) {
+      background: center 64px url("../img/icon-burger.svg") no-repeat;
+    }
+    &:last-child {
+      background: center 64px url("../img/icon-gift.svg") no-repeat;
+    }
   }
 }

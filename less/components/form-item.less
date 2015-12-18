@@ -1,11 +1,11 @@
 .form-item {
   label {
-    margin-left: 20px;
+    margin-left: 6.2%;
   }
   input {
     height: 20px;
     margin-top: 10px;
-    padding: 20px;
+    padding: 20px 6.2%;
     font-size: @s-title;
     font-weight: bold;
     border: none;
@@ -40,7 +40,7 @@ input[type='radio'] {
     content: '';
     position: relative;
     top: -15px;
-    left: -20px;
+    left: -6.2%;
     display: block;
     float: left;
     cursor: pointer;
@@ -94,7 +94,7 @@ input[type='checkbox'] {
     content: '';
     position: relative;
     top: -15px;
-    left: -20px;
+    left: -6.2%;
     display: block;
     float: left;
     width: 56px;
@@ -111,7 +111,7 @@ input[type='checkbox'] {
 }
 
 figure {
-  margin: 0 30px 0 0;
+  margin: 0 4.7%;
   display: inline-block;
   a {
     position: relative;
@@ -128,8 +128,98 @@ figure {
     border-radius: 50%;
     background-color: @lighten-grey;
   }
-  &:nth-child(3),
-  &:nth-child(6){
+}
+
+@media(min-width: 480px) {
+  label {
+  margin: auto;
+  padding-left: 6.2%;
+  }
+  .form-item {
+
+    &__btn {
+      width: 176px;
+      margin: 10px auto 22px;
+      background: @lighten-grey;
+    }
+    &__photo {
+      width: 140px;
+      height: 140px;
+    }
+    &__count-label {
+      padding-left: 28%;
+    }
+  }
+  input[type='text'] {
+    width: 156px;
+  }
+  input[type='number'] {
+    width: 26px;
     margin: 0;
+  }
+  input[type='checkbox'] {
+    display: none;
+    &~label {
+      margin-bottom: 35px;
+      padding: 10px 50px;
+    }
+    &~label:last-child::before {
+    }
+  }
+  figure {
+    a {
+      position: relative;
+      top: 25px;
+      left: 110px;
+      width: 50px;
+      cursor: pointer;
+      font-size: 50px;
+      line-height: 50px;
+      font-weight: normal;
+    }
+  }
+}
+
+@media(min-width: 1200px) {
+  .form-item {
+    &__btn {
+      width: 280px;
+      background: #fff;
+      margin: 0;
+    }
+    &__count-label {
+      padding-left: 0;
+    }
+    &__choice {
+      padding: 10px 100px;
+    }
+  }
+  input[type='text'] {
+    width: 240px;
+  }
+  input[type='number'] {
+    width: 100px;
+    margin: 4px;
+  }
+  input[type='checkbox'] {
+    display: none;
+    &~label {
+      margin-bottom: 35px;
+      padding: 30px 0;
+    }
+    &~label:last-child::before {
+    }
+  }
+  figure {
+    a {
+      position: relative;
+      top: 25px;
+      left: 110px;
+      width: 50px;
+      cursor: pointer;
+      font-size: 50px;
+      line-height: 50px;
+      font-weight: normal;
+    }
   }
 }
