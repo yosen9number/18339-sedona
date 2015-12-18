@@ -1,0 +1,16 @@
+.second-reason__img {
+  min-height: 256px;
+  background: url("../img/photo-bridge@1x.jpg") no-repeat;
+  background-size: cover;
+}
+
+@media @tablet {
+  .second-reason {
+    display: flex;
+    flex-direction: row-reverse;
+    &__img {
+      width: 67%;
+      background: url("../img/photo-bridge@2x.jpg") no-repeat;
+    }
+  }
+}
