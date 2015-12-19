@@ -1,8 +1,7 @@
 .social {
-  margin-top: 35px;
-  margin-right: 40px;
+  margin: 40px 40px 40px 0;
   text-align: center;
-  li{
+  li {
     display: inline-block;
     margin-right: 2px;
     list-style: none;
@@ -28,15 +27,26 @@
   }
 }
 
-@media @tablet{
+@media @tablet {
   .social {
-    margin-top: 0;
-    margin-right: 0;
+    margin: 37px 50px;
     width: 200px;
-    ul{
+    &__items {
+      margin: 0;
       padding: 0;
     }
   }
 
 }
 
+@media @desktop {
+  .social {
+    margin: 37px 120px 37px 50px;
+    width: 155px;
+    &__items {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+}

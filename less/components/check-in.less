@@ -1,11 +1,11 @@
 .check-in {
-  padding: 10px 6.2%;
+  padding: 0 6.2%;
   text-align: center;
   &__title {
     font-size: @m-title;
   }
   &__content {
-    line-height: 25px;
+    line-height: 24px;
     margin-bottom: 35px;
   }
   &__btn{
@@ -23,14 +23,29 @@
 
 @media @tablet {
   .check-in {
-
     &__title {
+      margin-top: 48px;
       font-size: 30px;
     }
     &__content {
-      padding: 0 20%;
+      margin-bottom: 41px;
+      padding: 0 18.5%;
     }
     &__btn {
+      margin-bottom: 58px;
+      max-width: 458px;
+    }
+  }
+}
+
+@media @desktop {
+  .check-in {
+    &__content {
+      margin-bottom: 48px;
+      padding: 0 18.5%;
+    }
+    &__btn {
+      margin-bottom: 66px;
       max-width: 458px;
     }
   }

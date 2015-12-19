@@ -1,5 +1,7 @@
 .second-reason__img {
   min-height: 256px;
+  background: url("../img/photo-bridge@1x.jpg") no-repeat #daa78f;
+  background-size: cover;
 }
 
 @media @tablet {
@@ -8,19 +10,8 @@
     flex-direction: row-reverse;
     &__img {
       width: 67%;
+      background: url("../img/photo-bridge@2x.jpg") no-repeat #daa78f;
+      background-size: cover;
     }
-  }
-}
-
-@media only screen and (min-device-pixel-ratio: 1) {
-  .second-reason__img {
-    background-image: url("../img/photo-bridge@1x.jpg") no-repeat;
-    background-size: cover;
-  }
-
-@media only screen and (min-device-pixel-ratio: 2) {
-  .second-reason__img {
-    background-image: url("../img/photo-bridge@2x.jpg") no-repeat;
-    background-size: cover;
   }
 }

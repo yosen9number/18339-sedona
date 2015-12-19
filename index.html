@@ -5,6 +5,7 @@
     <title>Sedona</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic&amp;subset=latin,cyrillic" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
     <header class="header">
@@ -24,8 +25,8 @@
         <picture>
           <source
             media="(min-width: 320px)"
-            srcset="img/logo-sedona@2x.png,
-                    img/logo-sedona@3x.png">
+            srcset="img/logo-sedona@2x.png 2x,
+                    img/logo-sedona@3x.png 3x">
           <img class="logo__sedona" src="img/logo-sedona@1x.png" width="67" height="56" alt="">
         </picture>
       </a>
@@ -33,14 +34,8 @@
     <div class="content-header content-header--index">
       <div class="content-header__text">
         <img class="content-header__text--welcome" src="img/text-welcome.svg" alt="" width="100%" height="100%">
-      </div>
-      <div class="content-header__text">
         <img class="content-header__text--gorgeous" src="img/text-tothegorgeous.svg" alt="" width="100%" height="100%">
-      </div>
-      <div class="content-header__text">
         <img class="content-header__text--sedona" src="img/text-sedona.svg" alt="" width="100%" height="100%">
-      </div>
-      <div class="content-header__text">
         <img class="content-header__text--because" src="img/text-becausecanyon.svg" alt="" width="100%" height="100%">
       </div>
     </div>
@@ -63,7 +58,7 @@
       </div>
       <div class="main-item">
         <h3 class="main-item__title">ЕДА</h3>
-        <p class="main-item__content">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>
+        <p class="main-item__content">Всегда заказывай ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>
       </div>
       <div class="main-item">
         <h3 class="main-item__title">СУВЕНИРЫ</h3>
@@ -112,13 +107,14 @@
           <li class="social__items--yt"><a href="#">youtube</a></li>
         </ul>
       </div>
-      <a class="copyright" href="#">Разработано
-        <svg class="copyright__htmlacademy" width="26.943000000000005" height="34.09" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+      <div class="copyright">
+        <a class="copyright__link" href="#">Разработано</a>
+        <svg class="copyright__htmlacademy" width="27" height="34" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
           <g>
             <path fill="black" id="htmlacademy" d="m13.62,0.017l-0.148,-0.017l-13.472,1.412l0,24.661l13.472,8.017l13.43,-7.99l0.042,-0.026l0,-24.662l-13.324,-1.395zm11.399,12.11l-11.524,-6.793l-0.001,-0.104l-0.087,0.05l-0.088,-0.056l0,0.109l-11.394,6.785l0,-8.971l11.547,-1.212l11.547,1.212l0,8.98zm-11.614,-5.34l11.518,6.713l-4.479,2.64l-7.093,-4.221l-0.013,1.415l5.904,3.513l-0.86,0.507l-5.031,-2.992l-0.013,1.415l3.827,2.275l-0.782,0.523l-3.032,-1.787l-0.013,1.413l1.852,1.091l-1.8,1.081l-11.356,-6.751l11.371,-6.835zm-11.48,8.34l11.411,6.791l0.015,1.044l-7.941,-4.728l-0.015,1.416l7.979,4.796l0.017,1.076l-7.972,-4.741l-0.013,1.415l8.021,4.821l0.045,0.026l8.143,-4.872l0,-1.268l-0.011,-0.148l0,-3.761l3.415,-2.036l0,10.02l-11.547,6.872l-11.547,-6.871l0,-9.852z"/>
           </g>
         </svg>
-      </a>
+      </div>
     </footer>
     <script src="js/scripts.js"></script>
   </body>
