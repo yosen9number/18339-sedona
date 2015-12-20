@@ -54,7 +54,22 @@ input[type='number'] {
     -webkit-appearance: none;
   }
 }
-
+.form-item__btn {
+  height: 60px;
+}
+.form-item__btn::after {
+  content: 'дн.';
+  position: relative;
+  top: -40px;
+  left: 35px;
+  display: block;
+  font-size: @s-title;
+  color: @darken-grey;
+  text-transform: lowercase;
+}
+.form-item__btn--persons::after {
+  content: 'чел.';
+}
 figure {
   margin: 0 4.7%;
   display: inline-block;
@@ -90,6 +105,13 @@ figure {
       width: 100%;
       background: @grey-color;
     }
+    &__btn::after {
+      content: '';
+      display: block;
+    }
+    &__btn--persons::after {
+      content: '';
+    }
     &--count {
       width: 100%;
       label {
@@ -103,6 +125,7 @@ figure {
       }
     }
   }
+
   .form-item:last-child {
     margin-right: 0;
   }
@@ -127,6 +150,19 @@ figure {
     }
     &__choice {
       padding: 10px 100px;
+    }
+    &__btn::after {
+      content: 'дн.';
+      position: relative;
+      top: -40px;
+      left: 35px;
+      display: block;
+      font-size: @s-title;
+      color: @darken-grey;
+      text-transform: lowercase;
+    }
+    &__btn--persons::after {
+      content: 'чел.';
     }
     &--count {
       label {
