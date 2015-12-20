@@ -2,9 +2,7 @@
   display: block;
   width: 130px;
   margin: 25px auto;
-
-
-  &__link {
+  &__title {
     display: block;
     float: left;
     width: 88px;
@@ -15,6 +13,13 @@
   }
   &___htmlacademy {
     margin: 0;
+    fill: #000;
+  }
+  &:hover svg {
+    fill: @main-color;
+  }
+  &:active svg {
+    fill: @text-color-down;
   }
 }
 

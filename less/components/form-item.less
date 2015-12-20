@@ -47,6 +47,18 @@
   &--disabled {
     box-shadow: inset 0 0 0 2px #bdbdbd;
   }
+  &__btn--minus:hover,
+  &__btn--plus:hover,
+  &__number:hover {
+    color: @grey-txt_hvr;
+    background-color: @grey-color_hvr;
+  }
+  &__btn--minus:active,
+  &__btn--plus:active,
+  &__number:active {
+    color: @grey-txt_down;
+    background: @grey-color_down;
+  }
 }
 input[type='text'] {
   display: block;
@@ -70,25 +82,6 @@ input[type='number'] {
   &::-webkit-inner-spin-button,
   &::-webkit-outer-spin-button {
     -webkit-appearance: none;
-  }
-}
-figure {
-  margin: 0 4.7%;
-  display: inline-block;
-  a {
-    position: relative;
-    top: 15px;
-    left: 20px;
-    display: block;
-    width: 30px;
-    cursor: pointer;
-    font-size: 30px;
-    line-height: 30px;
-    text-align: center;
-    text-decoration: none;
-    color: @darken-grey;
-    border-radius: 50%;
-    background-color: @grey-color;
   }
 }
 

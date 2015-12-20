@@ -7,7 +7,6 @@
     list-style: none;
     text-align: center;
     vertical-align: middle;
-    background-color: @main-color;
   }
   a {
     display: block;
@@ -17,13 +16,31 @@
     height: 48px;
   }
   &__items--tw {
-    background: left url('../img/sprite.png') no-repeat;
+    background: left top url('../img/sprite.png') no-repeat @main-color;
+  }
+  &__items--tw:hover {
+    background: left top url('../img/sprite.png') no-repeat @main-color_hvr;
+  }
+  &__items--tw:active {
+    background: left bottom url('../img/sprite.png') no-repeat @main-color_down;
   }
   &__items--fb {
-    background: center url('../img/sprite.png') no-repeat;
+    background: center top url('../img/sprite.png') no-repeat @main-color;
+  }
+  &__items--fb:hover {
+    background: center top url('../img/sprite.png') no-repeat @main-color_hvr;
+  }
+  &__items--fb:active {
+    background: center bottom url('../img/sprite.png') no-repeat @main-color_down;
   }
   &__items--yt {
-    background: right url('../img/sprite.png') no-repeat;
+    background: right top url('../img/sprite.png') no-repeat @main-color;
+  }
+  &__items--yt:hover {
+    background: right top url('../img/sprite.png') no-repeat @main-color_hvr;
+  }
+  &__items--yt:active {
+    background: right bottom url('../img/sprite.png') no-repeat @main-color_down;
   }
 }
 

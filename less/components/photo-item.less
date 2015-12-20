@@ -1,6 +1,5 @@
 .photo-item {
-  margin: 0 4.7%;
-  display: inline-block;
+  margin: 0;
   &__close {
     position: relative;
     top: 15px;
@@ -10,7 +9,13 @@
     height: 30px;
     cursor: pointer;
     border-radius: 50%;
-    background: left url('../img/delete.png')@grey-color;
+    background: left url('../img/delete_min.png')@grey-color;
+    &:hover {
+      background: center url('../img/delete_min.png')no-repeat @grey-color_hvr;
+    }
+    &:active {
+      background: right url('../img/delete_min.png')no-repeat @grey-color_down;
+    }
   }
   img {
     display: block;
@@ -22,14 +27,23 @@
 
 @media @tablet {
   .photo-item {
+    margin-right: 25px;
+    margin-left: 0;
     &__close {
       position: relative;
       top: 30px;
       left: 110px;
       width: 60px;
       height: 60px;
-      cursor: pointer;
-      background: left url('../img/delete.png')@grey-color;;
+      background: left url('../img/delete.png')@grey-color;
+      &:hover {
+        background: center url('../img/delete.png')no-repeat @grey-color_hvr;
+        background-size: cover;
+      }
+      &:active {
+        background: right url('../img/delete.png')no-repeat @grey-color_down;
+        background-size: cover;
+      }
     }
     img {
       width: 140px;
