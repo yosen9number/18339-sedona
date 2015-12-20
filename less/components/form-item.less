@@ -12,6 +12,41 @@
     border: none;
     background: @grey-color;
   }
+  &__btn {
+    display: block;
+    height: 60px;
+    margin: 10px 0 17px;
+    text-align: center;
+    &--minus,
+    &--plus {
+      display: inline-block;
+      vertical-align: middle;
+      width: 58px;
+      height: 58px;
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+      color: @darken-grey;
+      border: none;
+      background-color: @grey-color;
+    }
+  }
+  &__btn::after {
+    content: 'дн.';
+    position: relative;
+    top: -40px;
+    left: 35px;
+    display: block;
+    font-size: @s-title;
+    color: @darken-grey;
+    text-transform: lowercase;
+  }
+  &__btn--persons::after {
+    content: 'чел.';
+  }
+  &--disabled {
+    box-shadow: inset 0 0 0 2px #bdbdbd;
+  }
 }
 input[type='text'] {
   display: block;
@@ -25,23 +60,6 @@ input[type='text'] {
     background-color: #fff;
   }
 }
-.form-item__btn {
-  display: block;
-  margin: 10px 0 17px;
-  text-align: center;
-  &--minus,
-  &--plus {
-    display: inline-block;
-    vertical-align: middle;
-    width: 58px;
-    height: 58px;
-    text-align: center;
-    font-size: 30px;
-    font-weight: bold;
-    color: @darken-grey;
-    border: none;
-  }
-}
 input[type='number'] {
   display: inline-block;
   width: 37%;
@@ -53,22 +71,6 @@ input[type='number'] {
   &::-webkit-outer-spin-button {
     -webkit-appearance: none;
   }
-}
-.form-item__btn {
-  height: 60px;
-}
-.form-item__btn::after {
-  content: 'дн.';
-  position: relative;
-  top: -40px;
-  left: 35px;
-  display: block;
-  font-size: @s-title;
-  color: @darken-grey;
-  text-transform: lowercase;
-}
-.form-item__btn--persons::after {
-  content: 'чел.';
 }
 figure {
   margin: 0 4.7%;
@@ -130,6 +132,8 @@ figure {
     margin-right: 0;
   }
   input[type='text'] {
+    width: 77%;
+    padding: 20px;
     margin: 10px 0 13px;
   }
   input[type='number'] {

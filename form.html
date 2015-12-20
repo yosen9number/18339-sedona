@@ -46,11 +46,11 @@
         <div class="form-items__content">
           <div class="form-item">
             <label class="required" for="surname">ФАМИЛИЯ:</label>
-            <input type="text" id="surname" name="surname">
+            <input type="text" id="surname" name="surname"  required>
           </div>
           <div class="form-item">
             <label class="required" for="name">ИМЯ:</label>
-            <input type="text" id="name" name="name">
+            <input type="text" id="name" name="name"  required>
           </div>
           <div class="form-item">
             <label for="second-name">Отчество:</label>
@@ -76,19 +76,19 @@
         <div class="form-items__content">
           <div class="form-item">
             <label class="required" for="arrival-date">Дата приезда:</label>
-            <input type="text" id="arrival-date" name="arrival-date" >
+            <input type="text" id="arrival-date" name="arrival-date" required>
           </div>
           <div class="form-item">
             <label class="required" for="duration">Дней пребывания:</label>
-            <div class="form-item__btn form-item__btn----days">
-              <button class="form-item__btn--minus" type="button">&#8211;</button>
+            <div class="form-item__btn form-item__btn--days">
+              <button class="form-item__btn--minus">&#8211;</button>
               <input class="form-item__number" type="number" id="duration" name="duration" min="1" value="1">
-              <button class="form-item__btn--plus" type="button">+</button>
+              <button class="form-item__btn--plus">+</button>
             </div>
           </div>
           <div class="form-item">
             <label class="required" for="departure-date">Дата отъезда:</label>
-            <input class="form-item--disabled" type="text" id="departure-date" name="departure-date">
+            <input class="form-item--disabled" type="text" id="departure-date" name="departure-date" disabled>
           </div>
         </div><!--form-items__content-->
       </div><!--form-items-->
