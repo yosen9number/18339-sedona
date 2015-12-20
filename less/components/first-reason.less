@@ -1,7 +1,13 @@
 .first-reason__img {
   min-height: 256px;
-  background: url("../img/photo-city@1x.jpg") no-repeat #daa78f;
+  background: url("../img/photo-city@1x.jpg") no-repeat #dd9988;
   background-size: cover;
+}
+
+@media (min-resolution: 2dppx) {
+  .first-reason__img {
+    background: url("../img/photo-city@2x.jpg") no-repeat #dd9988;
+  }
 }
 
 @media @tablet{
@@ -10,8 +16,6 @@
     flex-direction: row;
     &__img {
       width: 67%;
-      background: url("../img/photo-city@2x.jpg") no-repeat #daa78f;
-      background-size: cover;
     }
   }
 }

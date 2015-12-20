@@ -1,31 +1,22 @@
 .form-item {
   label {
-    margin-left: 6.2%;
+    display: block;
+    margin-left: 7.3%;
   }
   input {
     height: 20px;
     margin-top: 10px;
-    padding: 20px 6.2%;
+    padding: 19px 6%;
     font-size: @s-title;
     font-weight: bold;
     border: none;
     background: @grey-color;
   }
-  &__choice {
-    display: block;
-    padding: 10px 0;
-    margin-bottom: 22px;
-    font-size: @s-title;
-    font-weight: bold;
-    text-transform: none;
-  }
 }
-
-
 input[type='text'] {
   display: block;
-  width: 85%;
-  margin-bottom: 15px;
+  width: 88%;
+  margin-bottom: 18px;
   &:hover {
     background-color: @grey-color_hvr;
   }
@@ -34,54 +25,16 @@ input[type='text'] {
     background-color: #fff;
   }
 }
-
-input[type='radio'] {
-  display: none;
-  &~label::before {
-    content: '';
-    position: relative;
-    top: -15px;
-    left: -6.2%;
-    display: block;
-    float: left;
-    cursor: pointer;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    border: 18px solid @grey-color;
-    background: @grey-color;
-  }
-  &:checked~label::before {
-    background-color: black;
-  }
-  &~label:hover::before {
-    border: 18px solid @grey-color_hvr;
-    background-color: @grey-color_hvr;
-  }
-  &~label:active::before  {
-    border: 18px solid @grey-color_down;
-    background-color: @grey-color_down;
-  }
-  &:checked~label:hover::before {
-    border: 18px solid @grey-color_hvr;
-    background-color: black;
-  }
-  &:checked~label:active::before {
-    border: 18px solid @grey-color_down;
-    background-color: @grey_down;
-  }
-}
-
 .form-item__btn {
   display: block;
-  margin: 10px 0 22px;
+  margin: 10px 0 17px;
   text-align: center;
   &--minus,
   &--plus {
     display: inline-block;
     vertical-align: middle;
-    width: 60px;
-    height: 60px;
+    width: 58px;
+    height: 58px;
     text-align: center;
     font-size: 30px;
     font-weight: bold;
@@ -99,43 +52,6 @@ input[type='number'] {
   &::-webkit-inner-spin-button,
   &::-webkit-outer-spin-button {
     -webkit-appearance: none;
-  }
-}
-
-input[type='checkbox'] {
-   display: none;
-  &~label {
-    margin-bottom: 35px;
-  }
-  &~label::before {
-    content: '';
-    position: relative;
-    top: -15px;
-    left: -6.2%;
-    display: block;
-    float: left;
-    width: 56px;
-    height: 56px;
-    cursor: pointer;
-    text-align: center;
-    border-radius: 5px;
-    background: @grey-color;
-  }
-  &:checked~label::before {
-    content: '';
-    background: left url("../img/check.png")no-repeat @grey-color;
-  }
-  &~label:hover::before {
-    background: @grey-color_hvr;
-  }
-  &~label:active::before  {
-    background: @grey-color_down;
-  }
-  &:checked~label:hover::before {
-    background: left url("../img/check.png")no-repeat @grey-color_hvr;
-  }
-  &:checked~label:active::before {
-    background: right url("../img/check.png")no-repeat @grey-color_down;
   }
 }
 
@@ -160,35 +76,42 @@ figure {
 }
 
 @media @tablet {
-  label {
-  margin: auto;
-  padding-left: 6.2%;
-  }
   .form-item {
-
-    &__btn {
-      width: 176px;
-      margin: 10px auto 22px;
-      background: @grey-color;
+    width: 27.3%;
+    margin-right: 58px;
+    label {
+      margin: auto;
+      padding-left: 20px;
     }
     &__count-label {
       padding-left: 28%;
     }
+    &__btn {
+      width: 100%;
+      background: @grey-color;
+    }
+    &--count {
+      width: 100%;
+      label {
+        padding: 0;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .form-item__btn {
+        width: 27.3%;
+        margin: auto;
+      }
+    }
+  }
+  .form-item:last-child {
+    margin-right: 0;
   }
   input[type='text'] {
-    width: 156px;
+    margin: 10px 0 13px;
   }
   input[type='number'] {
     width: 26px;
-    margin: 0;
-  }
-  input[type='checkbox'] {
-    &~label {
-      margin-bottom: 35px;
-      padding: 10px 50px;
-    }
-    &~label:last-child::before {
-    }
+    margin: auto;
   }
 }
 
@@ -205,13 +128,25 @@ figure {
     &__choice {
       padding: 10px 100px;
     }
+    &--count {
+      label {
+        padding-left: 20px;
+        text-align: left;
+        margin-bottom: 20px;
+      }
+      .form-item__btn{
+        width: 280px;
+        margin: auto 0;
+      }
+    }
   }
   input[type='text'] {
     width: 240px;
   }
   input[type='number'] {
-    width: 100px;
-    margin: 4px;
+    width: 104px;
+    padding: 20px;
+    margin: 0 4px;
   }
   input[type='checkbox'] {
     display: none;

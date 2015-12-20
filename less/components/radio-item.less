@@ -1,0 +1,67 @@
+.radio-item {
+  margin-left: 6%;
+  &__choice {
+    display: block;
+    padding: 10px 0;
+    margin-bottom: 22px;
+    font-size: @s-title;
+    font-weight: bold;
+    text-transform: none;
+  }
+}
+input[type='radio'] {
+  display: none;
+  &~label::before {
+    content: '';
+    position: relative;
+    top: -15px;
+    left: -6.2%;
+    display: block;
+    float: left;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 18px solid @grey-color;
+    background: @grey-color;
+  }
+  &:checked~label::before {
+    background-color: black;
+  }
+  &~label:hover::before {
+    border: 18px solid @grey-color_hvr;
+    background-color: @grey-color_hvr;
+  }
+  &~label:active::before  {
+    border: 18px solid @grey-color_down;
+    background-color: @grey-color_down;
+  }
+  &:checked~label:hover::before {
+    border: 18px solid @grey-color_hvr;
+    background-color: black;
+  }
+  &:checked~label:active::before {
+    border: 18px solid @grey-color_down;
+    background-color: @grey_down;
+  }
+}
+
+@media @tablet {
+  .radio-item {
+    height: 62px;
+    margin-top: 10px;
+    margin-left: 0;
+    &__choice {
+      padding: 19px 0 19px 18px;
+      vertical-align: center;
+    }
+    &__choice::before {
+      left: 0;
+      margin-right: 10px;
+    }
+  }
+}
+
+@media @desktop {
+  .radio-item {}
+}

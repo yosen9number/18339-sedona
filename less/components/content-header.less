@@ -1,11 +1,11 @@
 .content-header {
   display: block;
-  height: 160px;
+  height: 158px;
   width: 100%;
   margin-top: 40px;
   font-size: 0;
-  background: center url("../img/photo-background@1x.jpg") no-repeat;
   background-size: cover;
+  background: center 30% url("../img/photo-background@1x.jpg") no-repeat #ddeaf3;
   &--index::before {
     content: '';
     position: relative;
@@ -18,7 +18,7 @@
   &--page::before {
     content: '';
     position: relative;
-    top: 104px;
+    top: 102px;
     display: block;
     height: 57px;
     width: 100%;
@@ -26,6 +26,21 @@
   }
   &--index {
     height: 390px;
+  }
+}
+
+@media (min-resolution: 2dppx) {
+  .content-header {
+    background: center 30% url("../img/photo-background@2x.jpg") no-repeat #ddeaf3;
+  }
+}
+
+.content-header--page {
+  .content-header__text {
+    width: 174px;
+    &--sedona {
+      margin: -10px auto 0;
+    }
   }
 }
 .content-header__text {
@@ -52,10 +67,10 @@
     margin-top: 54px;
   }
 }
+
 @media @tablet {
   .content-header {
-    height: 300px;
-    background: center url(../img/photo-background@2x.jpg) no-repeat;
+    height: 290px;
     &--index {
       height: 510px;
       background-position: center 28%;
@@ -64,7 +79,7 @@
       top: 454px;
     }
     &--page::before {
-      top: 244px;
+      top: 233px;
     }
   }
   .content-header__text {
@@ -87,6 +102,12 @@
     &--because {
       width: 296px;
       padding: 0 73px;
+    }
+  }
+  .content-header--page {
+    .content-header__text {
+      width: 458px;
+      margin-top: 54px;
     }
   }
 }

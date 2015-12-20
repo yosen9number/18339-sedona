@@ -3,7 +3,7 @@
   border-top: 1px solid @border-color;
   &__title {
     margin-top: 18px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     text-align: center;
     font-size: @s-title;
   }
@@ -11,7 +11,7 @@
     display: block;
     height: 20px;
     max-width: 480px;
-    margin: 10px auto 25px;
+    margin: 0 auto 25px;
     padding: 20px 0;
     text-align: center;
     font-size: @m-title;
@@ -21,14 +21,10 @@
     border: none;
     background: @grey-color;
   }
-  &__file{
-     display: none;
-  }
-  #img{
+  &__file {
      display: none;
   }
 }
-
 
 @media @tablet {
   .form-items {
@@ -36,6 +32,7 @@
     border: none;
     &__title {
       padding-top: 35px;
+      margin-bottom: 25px;
       font-size: @m-title;
     }
     &__title::before {
@@ -43,21 +40,20 @@
       position: relative;
       display: block;
       float: left;
-      top:10px;
+      top:12px;
       left: 0;
-      width: 17%;
+      width: 19.5%;
       height: 1px;
       background: @darken-grey;
-
     }
     &__title::after {
       content: '';
       position: relative;
       display: block;
       float: right;
-      top:10px;
+      top:12px;
       left: 0;
-      width: 17%;
+      width: 19.5%;
       height: 1px;
       background: @darken-grey;
 
@@ -67,15 +63,23 @@
       flex-direction: row;
       justify-content: space-between;
       flex-wrap: wrap;
+      &--checkbox {
+        padding: 0 12.4%;
+      }
     }
     &__image-download {
-      min-width: 460px;
+      width: 458px;
     }
   }
-
 }
+
 @media @desktop {
-  .form-items__button {
-      min-width: 100%;
+  .form-items__content {
+    &--checkbox {
+      padding: 0;
+    }
+    &--radio {
+      padding: 0 170px;
+    }
   }
 }
