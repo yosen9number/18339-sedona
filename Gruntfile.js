@@ -9,11 +9,17 @@ module.exports = function(grunt) {
     less: {
       style: {
         files: {
-          "css/style.css": "less/style.less"
+          "build/css/style.css": ["source/less/style.less"]
         }
       }
     },
-
+    cmq: {
+      style: {
+        files: {
+          "build/css/style.css": ["build/css/style.css"]
+        }
+      }
+    },
     postcss: {
       options: {
         processors: [
@@ -21,22 +27,90 @@ module.exports = function(grunt) {
         ]
       },
       style: {
-        src: "css/*.css"
+        src: "build/css/*.css"
       }
     },
-
+    cssmin: {
+      options: {
+        keepSpecialComments: 0,
+        report: "gzip"
+      },
+      style: {
+        files: {
+          "build/css/style.min.css": ["build/css/style.css"]
+        }
+      }
+    },
+    csscomb: {
+      style: {
+        expand: true,
+        src: ["less/**/*.less"]
+      }
+    },
+    imagemin: {
+      images: {
+        options: {
+          optimizationLevel: 3
+        },
+        files: [{
+          expand: true,
+          src: ["build/img/**/*.{png,jpg,gif,svg}"]
+        }]
+      }
+    },
     watch: {
       style: {
         files: ["less/**/*.less"],
-        tasks: ["less", "postcss"],
+        tasks: ["less", "cmq", "postcss"],
         options: {
           spawn: false,
           livereload: true
         }
       }
+    },
+    clean: {
+      build: ["build"]
+    },
+    htmlmin: {
+      options: {
+        removeComments: true,
+        collapseWhitespace: true,
+        collapseBooleanAttributes: true,
+        caseSensitive: true,
+        keepClosingSlash: false
+      },
+      html: {
+        files: {
+          "build/index.min.html": "build/index.html"
+        }
+      }
+    },
+    copy: {
+      build: {
+        files: [{
+          expand: true,
+          cwd: "source",
+          src: [
+            "img/**",
+            "js/**",
+            "index.html"
+          ],
+          dest: "build"
+        }]
+      }
     }
   };
-  
+
+  grunt.registerTask("build", [
+    "clean",
+    "copy",
+    "less",
+    "cmq",
+    "postcss",
+    "cssmin",
+    "imagemin",
+    "htmlmin"
+  ]);
 
 
   // Не редактируйте эту строку
