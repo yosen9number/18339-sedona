@@ -39,27 +39,29 @@
     padding: 0 7.8%;
     border: none;
     &__title {
+      display: block;
+      width: 300px;
       padding-top: 35px;
       margin-bottom: 25px;
       font-size: @m-title;
     }
-    &__title::before {
+    &::before {
       content: '';
       position: relative;
       display: block;
       float: left;
-      top:12px;
+      top:48px;
       left: 0;
       width: 19.5%;
       height: 1px;
       background: @darken-grey;
     }
-    &__title::after {
+    &::after {
       content: '';
       position: relative;
       display: block;
       float: right;
-      top:12px;
+      top:48px;
       left: 0;
       width: 19.5%;
       height: 1px;
