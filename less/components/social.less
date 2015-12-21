@@ -1,14 +1,12 @@
 .social {
-  margin-top: 35px;
-  margin-right: 40px;
+  margin: 40px 40px 40px 0;
   text-align: center;
-  li{
+  li {
     display: inline-block;
     margin-right: 2px;
     list-style: none;
     text-align: center;
     vertical-align: middle;
-    background-color: @main-color;
   }
   a {
     display: block;
@@ -18,25 +16,54 @@
     height: 48px;
   }
   &__items--tw {
-    background: left url('../img/sprite.png') no-repeat;
+    background: left top url('../img/sprite.png') no-repeat @main-color;
+  }
+  &__items--tw:hover {
+    background: left top url('../img/sprite.png') no-repeat @main-color_hvr;
+  }
+  &__items--tw:active {
+    background: left bottom url('../img/sprite.png') no-repeat @main-color_down;
   }
   &__items--fb {
-    background: center url('../img/sprite.png') no-repeat;
+    background: center top url('../img/sprite.png') no-repeat @main-color;
+  }
+  &__items--fb:hover {
+    background: center top url('../img/sprite.png') no-repeat @main-color_hvr;
+  }
+  &__items--fb:active {
+    background: center bottom url('../img/sprite.png') no-repeat @main-color_down;
   }
   &__items--yt {
-    background: right url('../img/sprite.png') no-repeat;
+    background: right top url('../img/sprite.png') no-repeat @main-color;
+  }
+  &__items--yt:hover {
+    background: right top url('../img/sprite.png') no-repeat @main-color_hvr;
+  }
+  &__items--yt:active {
+    background: right bottom url('../img/sprite.png') no-repeat @main-color_down;
   }
 }
 
-@media @tablet{
+@media @tablet {
   .social {
-    margin-top: 0;
-    margin-right: 0;
+    margin: 37px 50px;
     width: 200px;
-    ul{
+    &__items {
+      margin: 0;
       padding: 0;
     }
   }
 
 }
 
+@media @desktop {
+  .social {
+    margin: 37px 120px 37px 50px;
+    width: 155px;
+    &__items {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+}

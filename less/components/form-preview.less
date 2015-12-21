@@ -1,0 +1,38 @@
+.form-preview {
+  padding: 0 6%;
+  margin-top: 74px;
+  margin-bottom: 18px;
+  text-align: center;
+  &__title {
+    margin-bottom: 27px;
+    font-size: @s-title;
+  }
+  &__content {
+    line-height: 24px;
+  }
+}
+
+@media @tablet {
+  .form-preview {
+    display: block;
+    margin: 0 6%;
+    padding: 0 15%;
+    text-align: center;
+    &__title {
+      margin-top: 65px;
+      margin-bottom: 27px;
+      font-size: 30px;
+      font-weight: bold;
+    }
+    &__content {
+      margin-bottom: 26px;
+      line-height: 22px;
+    }
+  }
+}
+
+@media @desktop {
+  .form-preview {
+    padding: 0 300px;
+  }
+}

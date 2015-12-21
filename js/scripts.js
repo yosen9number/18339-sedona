@@ -1,13 +1,15 @@
-var navOpen = document.querySelector (".main-menu__icon");
-var navClose = document.querySelector (".main-menu__close");
-var mainNav = document.querySelector(".main-menu__items");
+(function() {
+  var navOpen = document.querySelector(".main-menu__icon");
+  var navClose = document.querySelector(".main-menu__close");
+  var mainNav = document.querySelector(".main-menu__items");
 
-navOpen.addEventListener("click", function(event){
+  navOpen.addEventListener("click", function(event){
     mainNav.classList.add("main-menu__items--open");
-});
-navClose.addEventListener("click", function(event){
+  });
+  navClose.addEventListener("click", function(event){
     mainNav.classList.remove("main-menu__items--open");
-});
+  });
+})();
 
 (function() {
   var elements = document.querySelectorAll(".form-item__btn");
@@ -19,12 +21,14 @@ navClose.addEventListener("click", function(event){
     var minus = parent.querySelector(".form-item__btn--minus");
     var plus = parent.querySelector(".form-item__btn--plus");
 
-    minus.addEventListener("click", function(event) {
+    minus.addEventListener("click", function() {
       changeNumber(false);
+      console.log('нажали -');
     });
 
     plus.addEventListener("click", function() {
       changeNumber(true);
+      console.log('нажали +');
     });
 
     function changeNumber(operation) {
@@ -41,19 +45,20 @@ navClose.addEventListener("click", function(event){
   }
 })();
 
-(function(){
+
+(function() {
   if(!("FormData" in window)){
     return;
   }
   var queue = [];
-  var form = document.querySelector(".form");
+  var form = document.querySelector(".main-form");
 
   function removePreview(figure) {
     queue = queue.filter(function(element) {
       return element.figure != figure;
     });
 
-    div.parentNode.removeChild(div);
+    figure.parentNode.removeChild(figure);
   }
 
   form.addEventListener("submit", function(event){
@@ -65,7 +70,7 @@ navClose.addEventListener("click", function(event){
 
     queue.forEach(function(element) {
       data.append("images", element.file);
-    });
+    }); /*?*/
 
     xhr.open("post", "https://echo.htmlacademy.ru/adaptive?" + time);
     xhr.addEventListener("readystatechange", function(){
@@ -77,7 +82,7 @@ navClose.addEventListener("click", function(event){
     form.reset();
   });
 
-    form.querySelector(".form-items__file").addEventListener("change", function() {
+    document.querySelector(".form-items__file").addEventListener("change", function() {
 
       var files = this.files;
       for (var i = 0; i < files.length; i++) {
@@ -91,6 +96,7 @@ navClose.addEventListener("click", function(event){
       var imgTemplate = document.querySelector("#image-template").innerHTML;
       if (file.type.match(/image.*/)){
         var reader = new FileReader();
+
 
         reader.addEventListener("load", function(event){
 

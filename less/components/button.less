@@ -10,10 +10,17 @@
   color: #fff;
   border: none;
   background: @main-color;
+  &:hover {
+    background-color: @main-color_hvr;
+  }
+  &:active {
+    color: @text-color;
+    background-color: @main-color_down ;
+  }
 }
 
 @media @tablet {
   .button {
-    width: 460px;
+    width: 458px;
   }
 }

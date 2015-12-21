@@ -1,15 +1,15 @@
 .content-header {
   display: block;
-  height: 160px;
+  height: 158px;
   width: 100%;
   margin-top: 40px;
   font-size: 0;
-  background: center url("../img/photo-background@1x.jpg") no-repeat;
   background-size: cover;
+  background: center 30% url("../img/photo-background@1x.jpg") no-repeat #ddeaf3;
   &--index::before {
     content: '';
     position: relative;
-    top: 333px;
+    top: 334px;
     display: block;
     height: 57px;
     width: 100%;
@@ -18,7 +18,7 @@
   &--page::before {
     content: '';
     position: relative;
-    top: 103px;
+    top: 102px;
     display: block;
     height: 57px;
     width: 100%;
@@ -28,19 +28,35 @@
     height: 390px;
   }
 }
+
+@media (min-resolution: 2dppx) {
+  .content-header {
+    background: center 30% url("../img/photo-background@2x.jpg") no-repeat #ddeaf3;
+  }
+}
+
+.content-header--page {
+  .content-header__text {
+    width: 174px;
+    &--sedona {
+      margin: -10px auto 0;
+    }
+  }
+}
 .content-header__text {
   display: block;
   margin: 0 auto;
-  max-width: 280px;
+  width: 280px;
   &--welcome {
     width: 145px;
     padding: 0 67px;
-    margin-bottom: 10%;
+    margin-top: -10px;
+    margin-bottom: 10px;
   }
   &--gorgeous {
     width: 196px;
     padding: 0 42px;
-    margin-bottom: 50px;
+    margin-bottom: 58px;
   }
   &--sedona {
     width: 280px;
@@ -48,35 +64,44 @@
   &--because {
     width: 198px;
     padding: 0 41px;
-    margin-top: 50px;
+    margin-top: 54px;
   }
 }
+.content-header--page {
+  .content-header__text {
+    padding-top: 10px;
+    &--sedona {
+      width: 174px;
+    }
+  }
+}
+
 @media @tablet {
   .content-header {
-    height: 300px;
-    background: center url(../img/photo-background@2x.jpg) no-repeat;
+    height: 290px;
     &--index {
       height: 510px;
       background-position: center 28%;
     }
     &--index::before {
-      top: 453px;
+      top: 454px;
     }
     &--page::before {
-      top: 243px;
+      top: 233px;
     }
   }
   .content-header__text {
     display: block;
-    max-width: 458px;
+    width: 458px;
     &--welcome {
       width: 190px;
       padding: 0 134px;
+      margin-top: 20px;
     }
     &--gorgeous {
-      width: 265px;
-
+      width: 256px;
       padding: 0 101px;
+      margin-bottom: 53px;
     }
     &--sedona {
       width: 458px;
@@ -84,7 +109,13 @@
     }
     &--because {
       width: 296px;
-      padding: 0 81px;
+      padding: 0 73px;
+    }
+  }
+  .content-header--page {
+    .content-header__text--sedona {
+      width: 458px;
+      margin-top: 16px;
     }
   }
 }

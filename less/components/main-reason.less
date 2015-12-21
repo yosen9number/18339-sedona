@@ -8,7 +8,7 @@
     font-size: @s-title;
   }
   &__count {
-    margin: 0;
+    margin: 2px 0;
   }
   &__count::before,
   &__count::after {
@@ -23,13 +23,35 @@
   .main-reason {
     width: 21.3%;
     min-height: 206px;
-    padding: 25px 6%;
+    padding: 26px 6% 24px;
     &__title {
-      margin-bottom: 5px;
       font-size: @m-title;
+      margin-bottom: 8px;
     }
     &__count {
-      margin-bottom: 20px;
+      margin-bottom: 22px;
+    }
+    &__content {
+      line-height: 21px;
+    }
+  }
+}
+
+@media @desktop {
+  .main-reason {
+    width: 33.3%;
+    min-height: 256px;
+    padding: 0;
+    &__title {
+      font-size: @m-title;
+      margin: 49px 120px 0;
+    }
+    &__count {
+      margin: 10px 0 20px;
+    }
+    &__content {
+      line-height: 21px;
+      margin: 10px 60px;
     }
   }
 }
