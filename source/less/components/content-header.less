@@ -13,7 +13,7 @@
     display: block;
     height: 57px;
     width: 100%;
-    background: center bottom url("../img/intro-triangle.svg");
+    background: center bottom url("../img/intro-triangle.svg") no-repeat;
   }
   &--page::before {
     content: '';
@@ -22,7 +22,7 @@
     display: block;
     height: 57px;
     width: 100%;
-    background: center bottom url("../img/intro-triangle.svg");
+    background: center bottom url("../img/intro-triangle.svg") no-repeat;
   }
   &--index {
     height: 390px;
@@ -85,18 +85,11 @@
     }
     &--index::before {
       top: 454px;
+      background-size: contain;
     }
     &--page::before {
-      display: none;
-    }
-    &--page::after {
-      content: '';
-      position: relative;
-      top: 102px;
-      display: block;
-      height: 57px;
-      width: 100%;
-      background: center bottom url("../img/intro-triangle_tablet.png");
+      top: 233px;
+      background-size: contain;
     }
   }
   .content-header__text {

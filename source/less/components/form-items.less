@@ -46,7 +46,7 @@
     &__title--br {
       display: block;
       width: 300px;
-      margin: 0;
+      margin: 0 auto;
       padding: 0;
       text-align: center;
     }
@@ -66,7 +66,7 @@
       position: relative;
       display: block;
       float: right;
-      top:12px;
+      top: 12px;
       left: 0;
       width: 19.5%;
       height: 1px;
@@ -83,7 +83,18 @@
       }
     }
     &__image-download {
+      margin-top: 56px;
       width: 458px;
+    }
+    &--br {
+      &__title::before {
+        content: '';
+        top: 56px;
+      }
+      &__title:after {
+        content: '';
+        top: 56px;
+      }
     }
   }
 }
