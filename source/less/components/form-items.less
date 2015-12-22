@@ -40,22 +40,17 @@
     border: none;
     &__title {
       display: block;
-      width: 300px;
       padding-top: 35px;
       margin-bottom: 25px;
       font-size: @m-title;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
     &__title--br {
       display: block;
       width: 300px;
       margin: 0 auto;
-      padding: 0;
+      padding: 0 0 5px;
       text-align: center;
     }
-=======
->>>>>>> parent of c599fbc... 1
     &__title::before {
       content: '';
       position: relative;
@@ -79,6 +74,29 @@
       background: @darken-grey;
 
     }
+    &__title--line::before {
+      content: '';
+      position: relative;
+      display: block;
+      float: left;
+      top:28px;
+      left: 0;
+      width: 19.5%;
+      height: 1px;
+      background: @darken-grey;
+    }
+    &__title--line::after {
+      content: '';
+      position: relative;
+      display: block;
+      float: right;
+      top: -28px;
+      left: 0;
+      width: 19.5%;
+      height: 1px;
+      background: @darken-grey;
+
+    }
     &__content {
       display: flex;
       flex-direction: row;
@@ -91,16 +109,6 @@
     &__image-download {
       margin-top: 56px;
       width: 458px;
-    }
-    &--br {
-      &__title::before {
-        content: '';
-        top: 56px;
-      }
-      &__title:after {
-        content: '';
-        top: 56px;
-      }
     }
   }
 }

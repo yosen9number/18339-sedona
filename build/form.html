@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Оставьте свой отзыв</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic&amp;subset=latin,cyrillic" rel="stylesheet">
-    <link href="css/style.min.css" rel="stylesheet">
+    <link href="../build/css/style.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
@@ -149,8 +149,8 @@
           </div><!--persons-item-->
         </div><!--form-item-->
       </div><!--form-items-->
-      <div class="form-items form-items--br">
-        <h2 class="form-items__title"><span class="form-items__title--br">Посещенные достопримечательности:</span></h2>
+      <div class="form-items">
+        <h2 class="form-items__title form-items__title--line"><span class="form-items__title--br">Посещенные достопримечательности:</span></h2>
         <div class="form-items__content form-items__content--checkbox">
           <div class="checkbox-item">
             <input type="checkbox" id="bridge">
@@ -172,7 +172,7 @@
       </div><!--form-items-->
       <div class="form-items form-items--photos">
         <h2 class="form-items__title">ЗАГРУЗИТЕ ФОТОГРАФИИ:</h2>
-        <input class="form-items__file" type="file" id="upload-img" accept="image/jpeg, image/png, image/gif"  multiple>
+        <input class="form-items__file" type="file" id="upload-img" accept="image"  multiple>
         <label class="form-items__image-download" for="upload-img">ВЫБРАТЬ ФОТОГРАФИИ</label>
         <div class="photo-items">
           <figure class="photo-item">
