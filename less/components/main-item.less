@@ -1,41 +1,40 @@
 .main-item {
-  margin-bottom: 22px;
+  margin-bottom: 18px;
   &__title {
-    padding-top: 10px;
+    padding-top: 11px;
     font-size: @s-title;
-    margin-left: 16%;
+    margin-left: 17.5%;
   }
   &__content{
     line-height: 20px;
-    margin-left: 16%;
+    margin-left: 17.5%;
   }
   &:first-child {
-    background: url("../img/icon-house.svg") no-repeat ;
-    background-size: 12%;
+    background: 1px 2px url("../img/icon-house.svg") no-repeat ;
+    background-size: 13.5%;
 }
   &:nth-child(2) {
-    background: url("../img/icon-burger.svg") no-repeat;
-    background-size: 12%;
+    background: left 6px url("../img/icon-burger.svg") no-repeat;
+    background-size: 13.5%;
   }
   &:last-child {
-    background: url("../img/icon-gift.svg") no-repeat;
+    background: 4px top url("../img/icon-gift.svg") no-repeat;
     background-size: 12%;
   }
 }
 
 @media @tablet {
   .main-item {
-    width: 22.3%;
-    min-height: 256px;
+    width: 23.3%;
+    padding: 0 5%;
+    min-height: 330px;
     margin: 0;
-    padding: 0 6.5%;
     text-align: center;
     &__title {
-      padding-top: 124px;
+      padding-top: 136px;
       margin-bottom: 20px;
       margin-left: 0;
       font-size: @m-title;
-
     }
     &__content {
       line-height: 20px;
@@ -43,13 +42,13 @@
       margin-left: 0;
     }
     &:first-child {
-      background: center 64px url("../img/icon-house.svg") no-repeat;
+      background: center 59px url("../img/icon-house.svg") no-repeat;
     }
     &:nth-child(2) {
       background: center 64px url("../img/icon-burger.svg") no-repeat;
     }
     &:last-child {
-      background: center 64px url("../img/icon-gift.svg") no-repeat;
+      background: center 59px url("../img/icon-gift.svg") no-repeat;
     }
   }
 }

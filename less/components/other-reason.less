@@ -23,16 +23,43 @@
     border-bottom: 1px solid @border-color;
   }
 }
+
 @media @tablet {
   .other-reason {
-    width: 33.3%;
+    width: 22.3%;
     min-height: 206px;
-    padding: 25px 6.5%;
+    padding: 25px 5.5%;
     &__title {
+      padding: 0 6%;
       font-size: @m-title;
     }
     &__count {
       margin-bottom: 20px;
+    }
+    &__content {
+      padding: 0;
+    }
+    &:nth-child(2) {
+      border-top: none;
+      border-bottom: none;
+    }
+  }
+}
+
+@media @desktop {
+  .other-reason {
+    width: 22.3%;
+    min-height: 206px;
+    padding: 25px 5.5%;
+    &__title {
+      padding: 0 60px;
+      font-size: @m-title;
+    }
+    &__count {
+      margin-bottom: 20px;
+    }
+    &__content {
+      padding: 0;
     }
     &:nth-child(2) {
       border-top: none;

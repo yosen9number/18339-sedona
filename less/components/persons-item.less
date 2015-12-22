@@ -1,5 +1,5 @@
 .persons-item {
-  margin-top: 40px;
+  margin-top: 35px;
   &--left {
     display: block;
     float: left;
@@ -7,33 +7,32 @@
   &--right {
     display: block;
   }
-}
-
-
-.persons-item__count {
-  text-align: center;
-  div {
-    height: 20px;
-    width: 60px;
-    padding: 20px 0;
-    margin-top: 10px;
-    font-size: @s-title;
-    line-height: 20px;
-    font-weight: bold;
-    border: none;
-    background: @grey-color;
+  &__content {
+    display: block;
+    width: 75%;
+    margin-left: 70px;
   }
-}
-.persons-item__content {
-  display: block;
-  width: 75%;
-  margin-left: 70px;
+  &__count {
+    text-align: center;
+    div {
+      height: 20px;
+      width: 60px;
+      padding: 19px 0;
+      margin-top: 10px;
+      font-size: @s-title;
+      line-height: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+      background: @grey-color;
+    }
+  }
 }
 
 @media @tablet {
   .persons-item {
     &--left {
-      margin-right: 7px;
+      margin-right: 5px;
     }
     &--right {
       display: flex;
@@ -41,10 +40,21 @@
       justify-content: space-between;
     }
     &__content {
+      width: 188px;
       margin: 0 auto;
     }
     input[type='text'] {
-      width: 160px;
+      width: 148px;
+      margin-bottom: 0;
+      padding: 20px;
+    }
+    label {
+      padding-left: 13.5%;
+      margin-bottom: 0;
+      text-align: left;
+    }
+    &:last-child {
+      margin-bottom: 8px;
     }
   }
 }
@@ -56,16 +66,22 @@
     &--right {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: space-around;
     }
     &__content {
-      margin: 0 auto;
+      min-width: 280px;
+      margin-left: 60px;
+    }
+    &__content:first-child {
+      min-width: 212px;
+      margin-left: 0;
     }
     input[type='text'] {
       width: 240px;
+      padding: 20px;
     }
     &__content:first-child input[type='text']{
-      width: 180px;
+      width: 172px;
     }
   }
 }

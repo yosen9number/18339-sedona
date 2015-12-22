@@ -1,17 +1,30 @@
 .copyright {
   display: block;
-  margin: 10px auto;
-  width: 170px;
-  padding: 25px 30px 25px 0;
-  color: black;
-  text-decoration: none;
-  background: url("../img/copyright.png") no-repeat 85% 50%;
-
+  width: 130px;
+  margin: 25px auto;
+  &__title {
+    display: block;
+    float: left;
+    width: 88px;
+    margin-right: 10px;
+    padding: 8px 0;
+    color: black;
+    text-decoration: none;
+  }
+  &___htmlacademy {
+    margin: 0;
+    fill: #000;
+  }
+  &:hover svg {
+    fill: @main-color;
+  }
+  &:active svg {
+    fill: @text-color-down;
+  }
 }
 
-
-@media @tablet{
+@media @tablet {
   .copyright {
-    margin: 0;
+    margin: 40px;
   }
 }
