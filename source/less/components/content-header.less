@@ -29,7 +29,7 @@
   }
 }
 
-@media (min-resolution: 2dppx) {
+@media (min-resolution: 1.5dppx) {
   .content-header {
     background: center 30% url("../img/photo-background@2x.jpg") no-repeat #ddeaf3;
   }
@@ -87,7 +87,16 @@
       top: 454px;
     }
     &--page::before {
-      top: 233px;
+      display: none;
+    }
+    &--page::after {
+      content: '';
+      position: relative;
+      top: 102px;
+      display: block;
+      height: 57px;
+      width: 100%;
+      background: center bottom url("../img/intro-triangle_tablet.png");
     }
   }
   .content-header__text {
