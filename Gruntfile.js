@@ -41,12 +41,6 @@ module.exports = function(grunt) {
         }
       }
     },
-    csscomb: {
-      style: {
-        expand: true,
-        src: ["less/**/*.less"]
-      }
-    },
     imagemin: {
       images: {
         options: {
@@ -93,10 +87,16 @@ module.exports = function(grunt) {
           src: [
             "img/**",
             "js/**",
-            "index.html"
+            "*.html"
           ],
           dest: "build"
         }]
+      }
+    },
+    uglify: {
+      build: {
+        src: "source/js/scripts.js",
+        dest: "build/js/scripts.min.js"
       }
     }
   };
@@ -108,6 +108,7 @@ module.exports = function(grunt) {
     "cmq",
     "postcss",
     "cssmin",
+    "uglify",
     "imagemin",
     "htmlmin"
   ]);
