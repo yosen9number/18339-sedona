@@ -75,10 +75,7 @@ module.exports = function(grunt) {
       },
       html: {
         files: {
-          "build/index.min.html": "build/index.html",
-          "build/form.min.html": "build/form.html",
-          "build/blog.min.html": "build/blog.html",
-          "build/post.min.html": "build/post.html"
+          "build/index.min.html": "build/index.html"
         }
       }
     },
