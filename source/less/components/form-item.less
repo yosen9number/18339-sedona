@@ -11,10 +11,14 @@
     font-weight: bold;
     border: none;
     background: @grey-color;
-    :active,
-    :focus {
+    &:focus,
+    &:active {
       outline: none;
     }
+  }
+  button:active,
+  button:focus {
+    outline: none;
   }
   &__title--br {
     display: none;
@@ -60,9 +64,9 @@
     color: @grey-txt_hvr;
     background-color: @grey-color_hvr;
   }
-  &__btn--minus:active,
-  &__btn--plus:active,
-  &__number:active {
+  &__btn--minus:focus,
+  &__btn--plus:focus,
+  &__number:focus {
     color: @grey-txt_down;
     background: @grey-color_down;
   }
@@ -74,13 +78,14 @@ input[type='text'] {
   &:hover {
     background-color: @grey-color_hvr;
   }
-  &:active{
+  &:focus{
     box-shadow: inset 0 0 0 3px @grey-color_hvr;
     background-color: #fff;
   }
 }
 input[type='number'] {
   display: inline-block;
+  vertical-align: middle;
   width: 37%;
   margin: 0 1.5%;
   vertical-align: middle;

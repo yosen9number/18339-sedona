@@ -1,7 +1,7 @@
 body {
 	min-width: 320px;
 	max-width: 1200px;
-	font-family: 'PT Sans', sans-serif;
+	font-family: 'PT Sans', Arial, sans-serif;
 	font-size: 14px;
 	text-transform: uppercase;
 	margin: 0;
@@ -414,8 +414,13 @@ body {
 	background: #f2f2f2;
 }
 
-.form-item input :active,
-.form-item input :focus {
+.form-item input:focus,
+.form-item input:active {
+	outline: none;
+}
+
+.form-item button:active,
+.form-item button:focus {
 	outline: none;
 }
 
@@ -470,9 +475,9 @@ body {
 	background-color: #e5e5e5;
 }
 
-.form-item__btn--minus:active,
-.form-item__btn--plus:active,
-.form-item__number:active {
+.form-item__btn--minus:focus,
+.form-item__btn--plus:focus,
+.form-item__number:focus {
 	color: #c4c4c4;
 	background: #d5d5d5;
 }
@@ -487,7 +492,7 @@ input[type='text']:hover {
 	background-color: #e5e5e5;
 }
 
-input[type='text']:active {
+input[type='text']:focus {
 	box-shadow: inset 0 0 0 3px #e5e5e5;
 	background-color: #fff;
 }
@@ -781,6 +786,7 @@ input[type='checkbox']:checked ~ label:active::before {
 .blog-news__section::before {
 	content: '';
 	display: inline-block;
+	vertical-align: middle;
 	margin-left: 4px;
 	margin-right: 9px;
 	width: 11px;
@@ -810,6 +816,7 @@ input[type='checkbox']:checked ~ label:active::before {
 
 .pagination li {
 	display: inline-block;
+	vertical-align: middle;
 	width: 58px;
 	height: 18px;
 	margin: 0 1.9% 15px;
@@ -830,6 +837,7 @@ input[type='checkbox']:checked ~ label:active::before {
 
 .pagination__item--active {
 	display: inline-block;
+	vertical-align: middle;
 	width: 58px;
 	height: 58px;
 	background: #e5e5e5;
@@ -871,6 +879,7 @@ input[type='checkbox']:checked ~ label:active::before {
 .post-preview__section::before {
 	content: '';
 	display: inline-block;
+	vertical-align: middle;
 	margin-left: 4px;
 	margin-right: 9px;
 	width: 11px;
@@ -908,6 +917,7 @@ input[type='checkbox']:checked ~ label:active::before {
 .post__description li::before {
 	content: '';
 	display: inline-block;
+	vertical-align: middle;
 	width: 7px;
 	height: 7px;
 	margin-right: 10px;
@@ -974,6 +984,7 @@ input[type='checkbox']:checked ~ label:active::before {
 	display: inline-block;
 	width: 45%;
 	margin-bottom: 20px;
+	vertical-align: middle;
 }
 
 .post-btn__pre {
