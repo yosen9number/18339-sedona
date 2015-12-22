@@ -93,7 +93,7 @@ module.exports = function(grunt) {
           src: [
             "img/**",
             "js/**",
-            "index.html"
+            "*.html"
           ],
           dest: "build"
         }]
