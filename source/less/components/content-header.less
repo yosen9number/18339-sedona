@@ -6,30 +6,6 @@
   font-size: 0;
   background-size: cover;
   background: center 30% url("../img/photo-background@1x.jpg") no-repeat #ddeaf3;
-  &__text {
-    display: block;
-    margin: 0 auto;
-    width: 280px;
-  }
-  &__welcome {
-    width: 145px;
-    padding: 0 67px;
-    margin-top: -10px;
-    margin-bottom: 10px;
-  }
-  &__gorgeous {
-    width: 196px;
-    padding: 0 42px;
-    margin-bottom: 58px;
-  }
-  &__sedona {
-    width: 280px;
-  }
-  &__because {
-    width: 198px;
-    padding: 0 41px;
-    margin-top: 54px;
-  }
   &--index::before {
     content: '';
     position: relative;
@@ -50,6 +26,30 @@
   }
   &--index {
     height: 390px;
+    .content-header__text {
+      display: block;
+      margin: 0 auto;
+      width: 280px;
+    }
+    .content-header__welcome {
+      width: 145px;
+      padding: 0 67px;
+      margin-top: -10px;
+      margin-bottom: 10px;
+    }
+    .content-header__gorgeous {
+      width: 196px;
+      padding: 0 42px;
+      margin-bottom: 58px;
+    }
+    .content-header__sedona {
+      width: 280px;
+    }
+    .content-header__because {
+      width: 198px;
+      padding: 0 41px;
+      margin-top: 54px;
+    }
   }
   &--page {
     .content-header__text {
@@ -74,28 +74,29 @@
     &__text {
       display: block;
       width: 458px;
-    }
-    &__welcome {
-      width: 190px;
-      padding: 0 134px;
-      margin-top: 20px;
-    }
-    &__gorgeous {
-      width: 256px;
-      padding: 0 101px;
-      margin-bottom: 53px;
-    }
-    &__sedona {
-      width: 458px;
-      height: 78px;
-    }
-    &__because {
-      width: 296px;
-      padding: 0 73px;
+      margin: 0 auto;
     }
     &--index {
       height: 510px;
       background-position: center 28%;
+      .content-header__welcome {
+        width: 190px;
+        padding: 0 134px;
+        margin-top: 20px;
+      }
+      .content-header__gorgeous {
+        width: 256px;
+        padding: 0 101px;
+        margin-bottom: 53px;
+      }
+      .content-header__sedona {
+        width: 458px;
+        height: 78px;
+      }
+      .content-header__because {
+        width: 296px;
+        padding: 0 73px;
+      }
     }
     &--index::before {
       top: 454px;
@@ -108,7 +109,8 @@
     &--page {
       .content-header__sedona {
         width: 458px;
-        margin-top: 16px;
+        height: 78px;
+        margin-top: 35px;
       }
     }
   }

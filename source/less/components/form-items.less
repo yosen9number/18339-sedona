@@ -3,7 +3,7 @@
   border-top: 1px solid @border-color;
   &__title {
     margin-top: 18px;
-    margin-bottom: 20px;
+    margin-bottom: 28px;
     text-align: center;
     font-size: @s-title;
   }
@@ -29,6 +29,9 @@
       background: @grey-color_down;
     }
   }
+  &__image-desktop {
+    display: none;
+  }
   &__file {
      display: none;
   }
@@ -40,7 +43,7 @@
     border: none;
     &__title {
       display: block;
-      padding-top: 35px;
+      margin-top: 35px;
       margin-bottom: 25px;
       font-size: @m-title;
     }
@@ -114,6 +117,32 @@
 }
 
 @media @desktop {
+  .form-items {
+    &__image-download {
+      display: none;
+    }
+    &__image-desktop {
+      display: block;
+      height: 20px;
+      width: 956px;
+      margin: 0 auto 25px;
+      padding: 19px 0;
+      text-align: center;
+      font-size: @m-title;
+      line-height: 20px;
+      font-weight: bold;
+      color: #fff;
+      border: none;
+      background: @main-color;
+      &:hover {
+        background-color: @main-color_hvr;
+      }
+      &:active {
+        color: @text-color;
+        background-color: @main-color_down ;
+      }
+    }
+  }
   .form-items__content {
     &--checkbox {
       padding: 0;

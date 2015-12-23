@@ -33,7 +33,7 @@
     </header>
     <div class="content-header content-header--page">
       <div class="content-header__text">
-        <img class="content-header__text--sedona" src="img/text-sedona.svg" alt="" width="174" height="30">
+        <img class="content-header__sedona" src="img/text-sedona.svg" alt="" width="174" height="30">
       </div>
     </div>
     <div class="form-preview">
@@ -45,15 +45,15 @@
         <h2 class="form-items__title">Представьтесь, пожалуйста:</h2>
         <div class="form-items__content">
           <div class="form-item">
-            <label class="required" for="surname">ФАМИЛИЯ:</label>
+            <label class="form-item__label required" for="surname">ФАМИЛИЯ:</label>
             <input type="text" id="surname" name="surname"  required>
           </div>
           <div class="form-item">
-            <label class="required" for="name">ИМЯ:</label>
+            <label class="form-item__label required" for="name">ИМЯ:</label>
             <input type="text" id="name" name="name"  required>
           </div>
           <div class="form-item">
-            <label for="second-name">Отчество:</label>
+            <label class="form-item__label" for="second-name">Отчество:</label>
             <input type="text" id="second-name" name="second-name">
           </div>
         </div><!--form-items__content-->
@@ -75,11 +75,12 @@
         <h2 class="form-items__title">Даты вашей поездки:</h2>
         <div class="form-items__content">
           <div class="form-item">
-            <label class="required" for="arrival-date">Дата приезда:</label>
+            <label class="form-item__label required" for="arrival-date">Дата приезда:</label>
             <input type="text" id="arrival-date" name="arrival-date" required>
           </div>
           <div class="form-item">
-            <label class="required" for="duration">Дней пребывания:</label>
+            <label class="form-item__count-label required" for="duration">Длительность пребывания:</label>
+            <label class="form-item__label-tablet required" for="duration">Дней пребывания:</label>
             <div class="form-item__buttons form-item__buttons--days">
               <button class="form-item__btn form-item__btn--minus" type="button">&#8211;</button>
               <input class="form-item__number" type="number" id="duration" name="duration" min="1" value="1">
@@ -87,7 +88,7 @@
             </div>
           </div>
           <div class="form-item">
-            <label class="required" for="departure-date">Дата отъезда:</label>
+            <label class="form-item__label required" for="departure-date">Дата отъезда:</label>
             <input class="form-item form-item--disabled" type="text" id="departure-date" name="departure-date">
           </div>
         </div><!--form-items__content-->
@@ -97,6 +98,7 @@
         <div class="form-items__content">
         <div class="form-item form-item--count">
           <label class="form-item__count-label required" for="count">Количество путешественников:</label>
+          <label class="form-item__label-tablet required" for="count">Кол-во путешественников:</label>
           <div class="form-item__buttons form-item__buttons--persons">
             <button class="form-item__btn form-item__btn--minus" type="button">&#8211;</button>
             <input class="form-item__number" type="number" id="count" min="1" value="1">
@@ -111,15 +113,15 @@
             </div>
             <div class="persons-item__right">
               <div class="persons-item__content">
-                <label class="required" for="surname1">ФАМИЛИЯ:</label>
+                <label class="form-item__label required" for="surname1">ФАМИЛИЯ:</label>
                 <input type="text" id="surname1" required>
               </div>
               <div class="persons-item__content">
-                <label class="required" for="name1">ИМЯ:</label>
+                <label class="form-item__label required" for="name1">ИМЯ:</label>
                 <input type="text" id="name1" required>
               </div>
               <div class="persons-item__content">
-                <label for="second-name1">Отчество:</label>
+                <label class="form-item__label" for="second-name1">Отчество:</label>
                 <input type="text" id="second-name1">
               </div>
             </div>
@@ -133,15 +135,15 @@
             </div>
             <div class="persons-item__right">
               <div class="persons-item__content">
-                <label class="required" for="surname2">ФАМИЛИЯ:</label>
+                <label class="form-item__label required" for="surname2">ФАМИЛИЯ:</label>
                 <input type="text" id="surname2" required>
               </div>
               <div class="persons-item__content">
-                <label class="required" for="name2">ИМЯ:</label>
+                <label class="form-item__label required" for="name2">ИМЯ:</label>
                 <input type="text" id="name2" required>
               </div>
               <div class="persons-item__content">
-                <label for="second-name2">Отчество:</label>
+                <label class="form-item__label" for="second-name2">Отчество:</label>
                 <input type="text" id="second-name2">
               </div>
             </div>
@@ -174,7 +176,7 @@
         <h2 class="form-items__title">ЗАГРУЗИТЕ ФОТОГРАФИИ:</h2>
         <input class="form-items__file" type="file" id="upload-img" accept="image/jpeg, image/png, image/gif"  multiple>
         <label class="form-items__image-download" for="upload-img">ВЫБРАТЬ ФОТОГРАФИИ</label>
-        <div class="form-items__image-desktop">Перетащите фотографии сюда</div>
+        <label class="form-items__image-desktop" for="upload-img">Перетащите фотографии сюда</label>
         <div class="photo-items">
           <figure class="photo-item">
             <a class="photo-item__close" href="#" title="Удалить"></a>
@@ -255,6 +257,6 @@
         <img src="{{image}}" alt="{{name}}">
       </figure>
     </script>
-    <script src="js/scripts.min.js"></script>
+    <script src="js/scripts.js"></script>
   </body>
 </html>

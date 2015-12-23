@@ -1,5 +1,6 @@
 .form-item {
-  label {
+  &__label,
+  &__count-label {
     display: block;
     margin-left: 7.3%;
   }
@@ -15,6 +16,9 @@
     &:active {
       outline: none;
     }
+  }
+  &__label-tablet {
+    display: none;
   }
   button:active,
   button:focus {
@@ -96,11 +100,17 @@ input[type='number'] {
   .form-item {
     width: 27.3%;
     margin-right: 58px;
-    label {
+    &__label,
+    &__label-tablet {
+      display: block;
       margin: auto;
       padding-left: 20px;
-      margin-bottom: 15px;
+      margin-bottom: 14px;
     }
+    &__count-label {
+      display: none;
+    }
+
     &__count {
       margin-top: 20px;
     }
@@ -137,8 +147,8 @@ input[type='number'] {
   }
   input[type='text'] {
     width: 77%;
-    padding: 20px;
-    margin: 10px 0 13px;
+    padding: 19px 20px;
+    margin-bottom: 28px;
   }
   input[type='number'] {
     width: 26px;
@@ -148,13 +158,17 @@ input[type='number'] {
 
 @media @desktop {
   .form-item {
+    &__count-label {
+      display: block;
+      padding-left: 0;
+    }
+    &__label-tablet {
+      display: none;
+    }
     &__buttons {
       width: 280px;
       background: #fff;
       margin: 0;
-    }
-    &__count-label {
-      padding-left: 0;
     }
     &__choice {
       padding: 10px 100px;
@@ -191,5 +205,11 @@ input[type='number'] {
     padding: 20px;
     margin: 0 4px;
   }
-
+  input[type='checkbox'] {
+    display: none;
+    &~label {
+      margin-bottom: 35px;
+      padding: 30px 0;
+    }
+  }
 }
