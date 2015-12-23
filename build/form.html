@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Оставьте свой отзыв</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic&amp;subset=latin,cyrillic" rel="stylesheet">
-    <link href="../build/css/style.min.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
@@ -32,7 +32,7 @@
       </a>
     </header>
     <div class="content-header content-header--page">
-      <div class="content-header__text content-header__text--sedona">
+      <div class="content-header__text">
         <img class="content-header__text--sedona" src="img/text-sedona.svg" alt="" width="174" height="30">
       </div>
     </div>
@@ -41,7 +41,7 @@
       <p class="form-preview__content">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
     </div><!--form-review-->
     <form class="main-form" enctype="multipart/form-data">
-      <div class="form-items form-items--name">
+      <div class="form-items">
         <h2 class="form-items__title">Представьтесь, пожалуйста:</h2>
         <div class="form-items__content">
           <div class="form-item">
@@ -80,36 +80,36 @@
           </div>
           <div class="form-item">
             <label class="required" for="duration">Дней пребывания:</label>
-            <div class="form-item__btn form-item__btn--days">
-              <button class="form-item__btn--minus" type="button">&#8211;</button>
+            <div class="form-item__buttons form-item__buttons--days">
+              <button class="form-item__btn form-item__btn--minus" type="button">&#8211;</button>
               <input class="form-item__number" type="number" id="duration" name="duration" min="1" value="1">
-              <button class="form-item__btn--plus" type="button">+</button>
+              <button class="form-item__btn form-item__btn--plus" type="button">+</button>
             </div>
           </div>
           <div class="form-item">
             <label class="required" for="departure-date">Дата отъезда:</label>
-            <input class="form-item--disabled" type="text" id="departure-date" name="departure-date">
+            <input class="form-item form-item--disabled" type="text" id="departure-date" name="departure-date">
           </div>
         </div><!--form-items__content-->
       </div><!--form-items-->
       <div class="form-items form-items--count">
         <h2 class="form-items__title">Кол-во путешественников:</h2>
-        <div class="form-items__content"></div><!--form-items__content-->
+        <div class="form-items__content">
         <div class="form-item form-item--count">
           <label class="form-item__count-label required" for="count">Количество путешественников:</label>
-          <div class="form-item__btn form-item__btn--persons">
-            <button class="form-item__btn--minus" type="button">&#8211;</button>
+          <div class="form-item__buttons form-item__buttons--persons">
+            <button class="form-item__btn form-item__btn--minus" type="button">&#8211;</button>
             <input class="form-item__number" type="number" id="count" min="1" value="1">
-            <button class="form-item__btn--plus" type="button">+</button>
+            <button class="form-item__btn form-item__btn--plus" type="button">+</button>
           </div>
           <div class="persons-item">
-            <div class="persons-item--left">
+            <div class="persons-item__left">
               <div class="persons-item__count">
                 <span>№</span>
                 <div>1</div>
               </div>
             </div>
-            <div class="persons-item--right">
+            <div class="persons-item__right">
               <div class="persons-item__content">
                 <label class="required" for="surname1">ФАМИЛИЯ:</label>
                 <input type="text" id="surname1" required>
@@ -124,15 +124,14 @@
               </div>
             </div>
           </div><!--persons-item-->
-          <div
-            class="persons-item">
-            <div class="persons-item--left">
+          <div class="persons-item">
+            <div class="persons-item__left">
               <div class="persons-item__count">
                 <span>№</span>
                 <div>2</div>
               </div>
             </div>
-            <div class="persons-item--right">
+            <div class="persons-item__right">
               <div class="persons-item__content">
                 <label class="required" for="surname2">ФАМИЛИЯ:</label>
                 <input type="text" id="surname2" required>
@@ -148,9 +147,10 @@
             </div>
           </div><!--persons-item-->
         </div><!--form-item-->
+        </div><!--form-items__content-->
       </div><!--form-items-->
       <div class="form-items">
-        <h2 class="form-items__title form-items__title--line"><span class="form-items__title--br">Посещенные достопримечательности:</span></h2>
+        <h2 class="form-items__title form-items__title--line"><span class="form-items__title-br">Посещенные достопримечательности:</span></h2>
         <div class="form-items__content form-items__content--checkbox">
           <div class="checkbox-item">
             <input type="checkbox" id="bridge">
@@ -174,30 +174,37 @@
         <h2 class="form-items__title">ЗАГРУЗИТЕ ФОТОГРАФИИ:</h2>
         <input class="form-items__file" type="file" id="upload-img" accept="image/jpeg, image/png, image/gif"  multiple>
         <label class="form-items__image-download" for="upload-img">ВЫБРАТЬ ФОТОГРАФИИ</label>
+        <div class="form-items__image-desktop">Перетащите фотографии сюда</div>
         <div class="photo-items">
           <figure class="photo-item">
             <a class="photo-item__close" href="#" title="Удалить"></a>
             <img src="#" alt="...">
+            <span class="photo-item__name">IMG-690.JPG</span>
           </figure>
           <figure class="photo-item">
             <a class="photo-item__close" href="#" title="Удалить"></a>
             <img src="#" alt="...">
+            <span class="photo-item__name"></span>
           </figure>
           <figure class="photo-item">
             <a class="photo-item__close" href="#" title="Удалить"></a>
             <img src="#" alt="...">
+            <span class="photo-item__name"></span>
           </figure>
           <figure class="photo-item">
             <a class="photo-item__close" href="#" title="Удалить"></a>
             <img src="#" alt="...">
+            <span class="photo-item__name"></span>
           </figure>
           <figure class="photo-item">
             <a class="photo-item__close" href="#" title="Удалить"></a>
             <img src="#" alt="...">
+            <span class="photo-item__name"></span>
           </figure>
           <figure class="photo-item">
             <a class="photo-item__close" href="#" title="Удалить"></a>
             <img src="#" alt="...">
+            <span class="photo-item__name"></span>
           </figure>
         </div><!--form-item-->
       </div><!--form-items-->
@@ -207,9 +214,9 @@
       <span class="footer__title">#visitsedona</span>
       <div class="social">
         <ul class="social__items">
-          <li class="social__items--tw"><a href="#">twitter</a></li>
-          <li class="social__items--fb"><a href="#">facebook</a></li>
-          <li class="social__items--yt"><a href="#">youtube</a></li>
+          <li class="social__item social__item--tw"><a href="#">twitter</a></li>
+          <li class="social__item social__item--fb"><a href="#">facebook</a></li>
+          <li class="social__item social__item--yt"><a href="#">youtube</a></li>
         </ul>
       </div>
       <div class="copyright">
@@ -223,6 +230,25 @@
         </a>
       </div>
     </footer>
+    <div class="form-success">
+      <h2 class="form-success__title">Ваш отзыв отправлен!</h2>
+      <div class="form-success__content">
+        Спасибо за ваше участие, ваш отзыв уже поступил к нам.
+        В ближайшее время мы опубликуем его на сайте.
+      </div>
+      <div class="form-success__send">
+        <a href="#" class="form-success__btn">Закрыть окно</a>
+      </div>
+    </div>
+    <div class="form-fail">
+      <h2 class="form-fail__title">ЧТО-ТО ПОШЛО НЕ ТАК!</h2>
+      <div class="form-fail__content">
+        Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
+      </div>
+      <div class="form-fail__send">
+        <a href="#" class="form-fail__btn">ок</a>
+      </div>
+    </div>
     <script id="image-template" type="text/html">
       <figure class="photo-item">
         <a class="photo-item__close" href="#" title="Удалить"></a>

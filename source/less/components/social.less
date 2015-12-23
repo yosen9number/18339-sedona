@@ -1,9 +1,10 @@
 .social {
-  margin: 40px 40px 40px 0;
+  margin: 40px 40px 36px 0;
   text-align: center;
-  li {
+  &__item {
     display: inline-block;
     margin-right: 2px;
+    margin-bottom: 4px;
     list-style: none;
     text-align: center;
     vertical-align: middle;
@@ -15,31 +16,31 @@
     width: 46px;
     height: 48px;
   }
-  &__items--tw {
+  &__item--tw {
     background: left top url('../img/sprite.png') no-repeat @main-color;
   }
-  &__items--tw:hover {
+  &__item--tw:hover {
     background: left top url('../img/sprite.png') no-repeat @main-color_hvr;
   }
-  &__items--tw:active {
+  &__item--tw:active {
     background: left bottom url('../img/sprite.png') no-repeat @main-color_down;
   }
-  &__items--fb {
+  &__item--fb {
     background: center top url('../img/sprite.png') no-repeat @main-color;
   }
-  &__items--fb:hover {
+  &__item--fb:hover {
     background: center top url('../img/sprite.png') no-repeat @main-color_hvr;
   }
-  &__items--fb:active {
+  &__item--fb:active {
     background: center bottom url('../img/sprite.png') no-repeat @main-color_down;
   }
-  &__items--yt {
+  &__item--yt {
     background: right top url('../img/sprite.png') no-repeat @main-color;
   }
-  &__items--yt:hover {
+  &__item--yt:hover {
     background: right top url('../img/sprite.png') no-repeat @main-color_hvr;
   }
-  &__items--yt:active {
+  &__item--yt:active {
     background: right bottom url('../img/sprite.png') no-repeat @main-color_down;
   }
 }
@@ -47,7 +48,6 @@
 @media @tablet {
   .social {
     margin: 37px 50px;
-    width: 200px;
     &__items {
       margin: 0;
       padding: 0;
@@ -58,8 +58,8 @@
 
 @media @desktop {
   .social {
-    margin: 37px 120px 37px 50px;
-    width: 155px;
+    margin: 37px 70px 37px 0;
+    min-width: 300px;
     &__items {
       margin: 0;
       padding: 0;

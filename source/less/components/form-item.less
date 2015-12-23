@@ -20,29 +20,14 @@
   button:focus {
     outline: none;
   }
-  &__title--br {
-    display: none;
-  }
-  &__btn {
+  &__buttons {
     display: block;
     height: 60px;
     margin: 10px 0 17px;
     text-align: center;
-    &--minus,
-    &--plus {
-      display: inline-block;
-      vertical-align: middle;
-      width: 58px;
-      height: 58px;
-      text-align: center;
-      font-size: 30px;
-      font-weight: bold;
-      color: @darken-grey;
-      border: none;
-      background-color: @grey-color;
-    }
+
   }
-  &__btn::after {
+  &__buttons::after {
     content: 'дн.';
     position: relative;
     top: -40px;
@@ -52,21 +37,32 @@
     color: @darken-grey;
     text-transform: lowercase;
   }
-  &__btn--persons::after {
+  &__buttons--persons::after {
     content: 'чел.';
   }
   &--disabled {
     box-shadow: inset 0 0 0 2px #bdbdbd;
   }
-  &__btn--minus:hover,
-  &__btn--plus:hover,
+  &__btn {
+    display: inline-block;
+    vertical-align: middle;
+    width: 58px;
+    height: 58px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: @darken-grey;
+    border: none;
+    background-color: @grey-color;
+
+  }
+  &__btn:hover,
   &__number:hover {
     color: @grey-txt_hvr;
     background-color: @grey-color_hvr;
   }
-  &__btn--minus:focus,
-  &__btn--plus:focus,
-  &__number:focus {
+  &__btn:active,
+  &__number:active {
     color: @grey-txt_down;
     background: @grey-color_down;
   }
@@ -88,7 +84,6 @@ input[type='number'] {
   vertical-align: middle;
   width: 37%;
   margin: 0 1.5%;
-  vertical-align: middle;
   text-decoration: none;
   -moz-appearance:textfield;
   &::-webkit-inner-spin-button,
@@ -112,16 +107,16 @@ input[type='number'] {
     &__count-label {
       padding-left: 28%;
     }
-    &__btn {
+    &__buttons {
       width: 100%;
       margin-top: 10px;
       background: @grey-color;
     }
-    &__btn::after {
+    &__buttons::after {
       content: '';
       display: block;
     }
-    &__btn--persons::after {
+    &__buttons--persons::after {
       content: '';
     }
     &--count {
@@ -130,7 +125,7 @@ input[type='number'] {
         padding: 0;
         text-align: center;
       }
-      .form-item__btn {
+      .form-item__buttons {
         width: 27.3%;
         margin: auto;
       }
@@ -153,7 +148,7 @@ input[type='number'] {
 
 @media @desktop {
   .form-item {
-    &__btn {
+    &__buttons {
       width: 280px;
       background: #fff;
       margin: 0;
@@ -164,7 +159,7 @@ input[type='number'] {
     &__choice {
       padding: 10px 100px;
     }
-    &__btn::after {
+    &__buttons::after {
       content: 'дн.';
       position: relative;
       top: -40px;
@@ -174,7 +169,7 @@ input[type='number'] {
       color: @darken-grey;
       text-transform: lowercase;
     }
-    &__btn--persons::after {
+    &__buttons--persons::after {
       content: 'чел.';
     }
     &--count {
@@ -182,7 +177,7 @@ input[type='number'] {
         padding-left: 20px;
         text-align: left;
       }
-      .form-item__btn{
+      .form-item__buttons{
         width: 280px;
         margin: auto 0;
       }
@@ -196,11 +191,5 @@ input[type='number'] {
     padding: 20px;
     margin: 0 4px;
   }
-  input[type='checkbox'] {
-    display: none;
-    &~label {
-      margin-bottom: 35px;
-      padding: 30px 0;
-    }
-  }
+
 }

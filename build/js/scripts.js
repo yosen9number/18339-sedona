@@ -12,36 +12,32 @@
 })();
 
 (function() {
-  var elements = document.querySelectorAll(".form-item__btn");
-  for (var i = 0; i < elements.length; i++) {
-    initNumberField(elements[i]);
+  var number = document.querySelectorAll(".form-item__number");
+  var plus = document.querySelectorAll (".form-item__btn--plus");
+  var minus = document.querySelectorAll (".form-item__btn--minus");
+
+  for(i=0;i<plus.length;i++){
+    plus[i].addEventListener("click", function(event){
+      event.preventDefault();
+      var el = event.target;
+      var parent = el.parentNode;
+      number = parent.querySelector(".form-item__number")
+      if(parseInt(number.value) < 999){
+        number.value = parseInt(number.value) +1;
+      }
+    });
   }
-  function initNumberField(parent) {
-    var input = parent.querySelector(".form-item__number");
-    var minus = parent.querySelector(".form-item__btn--minus");
-    var plus = parent.querySelector(".form-item__btn--plus");
 
-    minus.addEventListener("click", function() {
-      changeNumber(false);
-      console.log('нажали -');
-    });
-
-    plus.addEventListener("click", function() {
-      changeNumber(true);
-      console.log('нажали +');
-    });
-
-    function changeNumber(operation) {
-      var value = Number(input.value);
-      if (isNaN(value)) {
-        value = 0;
+  for(i=0;i<minus.length;i++){
+    minus[i].addEventListener("click", function(event){
+      event.preventDefault();
+      var el = event.target;
+      var parent = el.parentNode;
+      number = parent.querySelector(".form-item__number")
+      if(parseInt(number.value) -1 >= 0){
+        number.value = parseInt(number.value) -1;
       }
-      if (operation) {
-        input.value = value + 1;
-      } else {
-        input.value = value - 1;
-      }
-    }
+    });
   }
 })();
 

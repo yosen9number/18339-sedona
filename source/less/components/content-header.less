@@ -6,6 +6,30 @@
   font-size: 0;
   background-size: cover;
   background: center 30% url("../img/photo-background@1x.jpg") no-repeat #ddeaf3;
+  &__text {
+    display: block;
+    margin: 0 auto;
+    width: 280px;
+  }
+  &__welcome {
+    width: 145px;
+    padding: 0 67px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
+  &__gorgeous {
+    width: 196px;
+    padding: 0 42px;
+    margin-bottom: 58px;
+  }
+  &__sedona {
+    width: 280px;
+  }
+  &__because {
+    width: 198px;
+    padding: 0 41px;
+    margin-top: 54px;
+  }
   &--index::before {
     content: '';
     position: relative;
@@ -27,58 +51,48 @@
   &--index {
     height: 390px;
   }
-}
-
-@media (min-resolution: 2dppx) {
-  .content-header {
-    background: center 30% url("../img/photo-background@2x.jpg") no-repeat #ddeaf3;
-  }
-}
-
-.content-header--page {
-  .content-header__text {
-    width: 174px;
-    &--sedona {
+  &--page {
+    .content-header__text {
+      padding-top: 10px;
+    }
+    .content-header__sedona {
+      width: 174px;
       margin: -10px auto 0;
     }
   }
 }
-.content-header__text {
-  display: block;
-  margin: 0 auto;
-  width: 280px;
-  &--welcome {
-    width: 145px;
-    padding: 0 67px;
-    margin-top: -10px;
-    margin-bottom: 10px;
-  }
-  &--gorgeous {
-    width: 196px;
-    padding: 0 42px;
-    margin-bottom: 58px;
-  }
-  &--sedona {
-    width: 280px;
-  }
-  &--because {
-    width: 198px;
-    padding: 0 41px;
-    margin-top: 54px;
-  }
-}
-.content-header--page {
-  .content-header__text {
-    padding-top: 10px;
-    &--sedona {
-      width: 174px;
-    }
+
+@media (min-resolution: 1.5dppx) {
+  .content-header {
+    background: center 30% url("../img/photo-background@2x.jpg") no-repeat #ddeaf3;
   }
 }
 
 @media @tablet {
   .content-header {
     height: 290px;
+    &__text {
+      display: block;
+      width: 458px;
+    }
+    &__welcome {
+      width: 190px;
+      padding: 0 134px;
+      margin-top: 20px;
+    }
+    &__gorgeous {
+      width: 256px;
+      padding: 0 101px;
+      margin-bottom: 53px;
+    }
+    &__sedona {
+      width: 458px;
+      height: 78px;
+    }
+    &__because {
+      width: 296px;
+      padding: 0 73px;
+    }
     &--index {
       height: 510px;
       background-position: center 28%;
@@ -91,33 +105,11 @@
       top: 233px;
       background-size: contain;
     }
-  }
-  .content-header__text {
-    display: block;
-    width: 458px;
-    &--welcome {
-      width: 190px;
-      padding: 0 134px;
-      margin-top: 20px;
-    }
-    &--gorgeous {
-      width: 256px;
-      padding: 0 101px;
-      margin-bottom: 53px;
-    }
-    &--sedona {
-      width: 458px;
-      height: 78px;
-    }
-    &--because {
-      width: 296px;
-      padding: 0 73px;
-    }
-  }
-  .content-header--page {
-    .content-header__text--sedona {
-      width: 458px;
-      margin-top: 16px;
+    &--page {
+      .content-header__sedona {
+        width: 458px;
+        margin-top: 16px;
+      }
     }
   }
 }
