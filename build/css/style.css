@@ -1263,12 +1263,6 @@ input[type='radio']:checked ~ label:active::before {
 	height: 290px;
 }
 
-.content-header__text {
-	display: block;
-	width: 458px;
-	margin: 0 auto;
-}
-
 .content-header--index {
 	height: 510px;
 	background-position: center 28%;
@@ -1278,6 +1272,12 @@ input[type='radio']:checked ~ label:active::before {
 	width: 190px;
 	padding: 0 134px;
 	margin-top: 20px;
+}
+
+.content-header--index .content-header__text {
+	display: block;
+	width: 458px;
+	margin: 0 auto;
 }
 
 .content-header--index .content-header__gorgeous {
@@ -1304,6 +1304,12 @@ input[type='radio']:checked ~ label:active::before {
 .content-header--page::before {
 	top: 233px;
 	background-size: contain;
+}
+
+.content-header--page .content-header__text {
+	display: block;
+	width: 458px;
+	margin: 0 auto;
 }
 
 .content-header--page .content-header__sedona {
@@ -1933,7 +1939,7 @@ body {
 
 .check-in__content {
 	margin-bottom: 48px;
-	padding: 0 18.5%;
+	padding: 0 28%;
 }
 
 .check-in__btn {
