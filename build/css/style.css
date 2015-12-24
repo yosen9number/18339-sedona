@@ -159,12 +159,14 @@ body {
 }
 
 .content-header--page .content-header__text {
+	width: 174px;
+	height: 30px;
 	padding-top: 10px;
+	margin: -20px auto 0;
 }
 
 .content-header--page .content-header__sedona {
 	width: 174px;
-	margin: -10px auto 0;
 }
 
 .index-header {
@@ -399,13 +401,13 @@ body {
 .form-item__label,
 .form-item__count-label {
 	display: block;
-	margin-left: 7.3%;
+	margin-left: 20px;
 }
 
 .form-item input {
 	height: 20px;
 	margin-top: 10px;
-	padding: 19px 6%;
+	padding: 19px;
 	font-size: 18px;
 	font-weight: bold;
 	border: none;
@@ -428,9 +430,9 @@ body {
 
 .form-item__buttons {
 	display: block;
-	height: 60px;
+	height: 58px;
+	width: 280px;
 	margin: 10px 0 17px;
-	text-align: center;
 }
 
 .form-item__buttons::after {
@@ -441,6 +443,7 @@ body {
 	display: block;
 	font-size: 18px;
 	color: #b8b8b8;
+	text-align: center;
 	text-transform: lowercase;
 }
 
@@ -455,7 +458,7 @@ body {
 .form-item__btn {
 	display: inline-block;
 	vertical-align: middle;
-	width: 58px;
+	width: 60px;
 	height: 58px;
 	text-align: center;
 	font-size: 30px;
@@ -479,7 +482,7 @@ body {
 
 input[type='text'] {
 	display: block;
-	width: 88%;
+	width: 86%;
 	margin-bottom: 18px;
 }
 
@@ -495,8 +498,10 @@ input[type='text']:focus {
 input[type='number'] {
 	display: inline-block;
 	vertical-align: middle;
-	width: 37%;
+	height: 20px;
+	width: 102px;
 	margin: 0 1.5%;
+	padding: 19px;
 	text-decoration: none;
 	-moz-appearance: textfield;
 }
@@ -637,7 +642,7 @@ input[type='radio']:checked ~ label:active::before {
 
 .persons-item__content {
 	display: block;
-	width: 75%;
+	width: 71.5%;
 	margin-left: 70px;
 }
 
@@ -696,6 +701,10 @@ input[type='radio']:checked ~ label:active::before {
 
 .photo-item__close:active {
 	background: right url('../img/delete_min.png') no-repeat #d5d5d5;
+}
+
+.photo-item__name {
+	display: none;
 }
 
 .photo-item img {
@@ -775,6 +784,7 @@ input[type='radio']:checked ~ label:active::before {
 	text-align: center;
 	padding-top: 25px;
 	padding-bottom: 25px;
+	margin-bottom: 40px;
 }
 
 .form-success__title {
@@ -1553,7 +1563,11 @@ input[type='radio']:checked ~ label:active::before {
 }
 
 .form-items__content--checkbox {
-	padding: 0 15.5%;
+	margin: 35px 15.5% 60px;
+}
+
+.form-items__content--radio {
+	margin-bottom: 55px;
 }
 
 .form-items__image-download {
@@ -1599,6 +1613,10 @@ input[type='radio']:checked ~ label:active::before {
 
 .form-item__buttons--persons::after {
 	content: '';
+}
+
+.form-item__btn {
+	width: 60px;
 }
 
 .form-item--count {
@@ -1663,6 +1681,10 @@ input[type='number'] {
 	margin: auto 24px auto 0;
 }
 
+.persons-item {
+	margin: 30px 0;
+}
+
 .persons-item__left {
 	margin-right: 5px;
 }
@@ -1691,17 +1713,12 @@ input[type='number'] {
 .persons-item input[type='text'] {
 	width: 148px;
 	margin-bottom: 0;
-	padding: 20px;
 }
 
 .persons-item label {
 	padding-left: 13.5%;
 	margin-bottom: 15px;
 	text-align: left;
-}
-
-.persons-item:last-child {
-	margin-bottom: 8px;
 }
 
 .photo-items {
@@ -1717,11 +1734,12 @@ input[type='number'] {
 	-webkit-justify-content: space-between;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
-	margin: 0 5%;
+	margin: 0 5% 90px;
 }
 
 .photo-item {
-	margin-right: 25px;
+	height: 210px;
+	margin-right: 30px;
 	margin-left: 0;
 }
 
@@ -1744,17 +1762,24 @@ input[type='number'] {
 	background-size: cover;
 }
 
+.photo-item__name {
+	display: block;
+}
+
 .photo-item img {
 	width: 140px;
 	height: 140px;
+	margin-bottom: 18px;
 }
 
 .button {
 	width: 458px;
+	margin-bottom: 95px;
 }
 
 .form-fail {
 	width: 400px;
+	margin: 0 auto;
 }
 
 .form-fail__title {
@@ -1777,6 +1802,7 @@ input[type='number'] {
 .form-success {
 	width: 640px;
 	padding-bottom: 0;
+	margin: 0 auto 50px;
 }
 
 .form-success__title {
@@ -1821,7 +1847,7 @@ input[type='number'] {
 }
 
 .social {
-	margin: 37px 50px;
+	margin: 45px 50px 35px;
 }
 
 .social__items {
@@ -1919,6 +1945,10 @@ body {
 	padding: 0 300px;
 }
 
+.form-preview__title {
+	margin-top: 105px;
+}
+
 .form-items__image-download {
 	display: none;
 }
@@ -1927,7 +1957,7 @@ body {
 	display: block;
 	height: 20px;
 	width: 956px;
-	margin: 0 auto 25px;
+	margin: 56px auto 30px;
 	padding: 19px 0;
 	text-align: center;
 	font-size: 21px;
@@ -1949,6 +1979,7 @@ body {
 
 .form-items__content--checkbox {
 	padding: 0;
+	margin: 35px auto 43px;
 }
 
 .form-items__content--radio {
@@ -1957,7 +1988,9 @@ body {
 
 .form-item__count-label {
 	display: block;
-	padding-left: 0;
+	margin: auto;
+	padding-left: 20px;
+	margin-bottom: 14px;
 }
 
 .form-item__label-tablet {
@@ -2005,7 +2038,7 @@ input[type='text'] {
 
 input[type='number'] {
 	width: 104px;
-	padding: 20px;
+	padding: 19px;
 	margin: 0 4px;
 }
 
@@ -2046,11 +2079,14 @@ input[type='checkbox'] ~ label {
 
 .persons-item input[type='text'] {
 	width: 240px;
-	padding: 20px;
 }
 
 .persons-item__content:first-child input[type='text'] {
 	width: 172px;
+}
+
+.button {
+	margin-bottom: 68px;
 }
 
 .footer__title {

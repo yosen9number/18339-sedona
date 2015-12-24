@@ -17,6 +17,9 @@
       background: right url('../img/delete_min.png')no-repeat @grey-color_down;
     }
   }
+  &__name {
+    display: none;
+  }
   img {
     display: block;
     width: 70px;
@@ -27,7 +30,8 @@
 
 @media @tablet {
   .photo-item {
-    margin-right: 25px;
+    height: 210px;
+    margin-right: 30px;
     margin-left: 0;
     &__close {
       position: relative;
@@ -45,9 +49,13 @@
         background-size: cover;
       }
     }
+    &__name {
+      display: block;
+    }
     img {
       width: 140px;
       height: 140px;
+      margin-bottom: 18px;
     }
   }
 }

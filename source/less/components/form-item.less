@@ -2,12 +2,12 @@
   &__label,
   &__count-label {
     display: block;
-    margin-left: 7.3%;
+    margin-left: 20px;
   }
   input {
     height: 20px;
     margin-top: 10px;
-    padding: 19px 6%;
+    padding: 19px;
     font-size: @s-title;
     font-weight: bold;
     border: none;
@@ -26,9 +26,9 @@
   }
   &__buttons {
     display: block;
-    height: 60px;
+    height: 58px;
+    width: 280px;
     margin: 10px 0 17px;
-    text-align: center;
 
   }
   &__buttons::after {
@@ -39,6 +39,7 @@
     display: block;
     font-size: @s-title;
     color: @darken-grey;
+    text-align: center;
     text-transform: lowercase;
   }
   &__buttons--persons::after {
@@ -50,7 +51,7 @@
   &__btn {
     display: inline-block;
     vertical-align: middle;
-    width: 58px;
+    width: 60px;
     height: 58px;
     text-align: center;
     font-size: 30px;
@@ -73,7 +74,7 @@
 }
 input[type='text'] {
   display: block;
-  width: 88%;
+  width: 86%;
   margin-bottom: 18px;
   &:hover {
     background-color: @grey-color_hvr;
@@ -86,8 +87,10 @@ input[type='text'] {
 input[type='number'] {
   display: inline-block;
   vertical-align: middle;
-  width: 37%;
+  height: 20px;
+  width: 102px;
   margin: 0 1.5%;
+  padding: 19px;
   text-decoration: none;
   -moz-appearance:textfield;
   &::-webkit-inner-spin-button,
@@ -129,6 +132,9 @@ input[type='number'] {
     &__buttons--persons::after {
       content: '';
     }
+    &__btn {
+      width: 60px;
+    }
     &--count {
       width: 100%;
       label {
@@ -160,7 +166,9 @@ input[type='number'] {
   .form-item {
     &__count-label {
       display: block;
-      padding-left: 0;
+      margin: auto;
+      padding-left: 20px;
+      margin-bottom: 14px;
     }
     &__label-tablet {
       display: none;
@@ -202,7 +210,7 @@ input[type='number'] {
   }
   input[type='number'] {
     width: 104px;
-    padding: 20px;
+    padding: 19px;
     margin: 0 4px;
   }
   input[type='checkbox'] {
