@@ -35,8 +35,9 @@
     content: 'дн.';
     position: relative;
     top: -40px;
-    left: 35px;
+    left: 150px;
     display: block;
+    width: 45px;
     font-size: @s-title;
     color: @darken-grey;
     text-align: center;
@@ -53,6 +54,7 @@
     vertical-align: middle;
     width: 60px;
     height: 58px;
+    cursor: pointer;
     text-align: center;
     font-size: 30px;
     font-weight: bold;
@@ -133,7 +135,7 @@ input[type='number'] {
       content: '';
     }
     &__btn {
-      width: 60px;
+      width: 58px;
     }
     &--count {
       width: 100%;
@@ -158,6 +160,7 @@ input[type='number'] {
   }
   input[type='number'] {
     width: 26px;
+    padding: 19px 12px;
     margin: auto;
   }
 }
@@ -185,10 +188,12 @@ input[type='number'] {
       content: 'дн.';
       position: relative;
       top: -40px;
-      left: 35px;
+      left: 150px;
       display: block;
+      width: 45px;
       font-size: @s-title;
       color: @darken-grey;
+      text-align: center;
       text-transform: lowercase;
     }
     &__buttons--persons::after {
