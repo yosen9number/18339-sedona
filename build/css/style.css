@@ -1221,7 +1221,7 @@ input[type='radio']:checked ~ label:active::before {
 	margin-right: 12%;
 }
 
-.main-menu li:last-child {
+.main-menu li:last-child a {
 	box-shadow: none;
 }
 

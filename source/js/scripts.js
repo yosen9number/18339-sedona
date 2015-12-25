@@ -41,6 +41,41 @@
   }
 })();
 
+(function() {
+  var count = document.querySelector("#count");
+  var value = parseInt(count.value);
+  var personsCountPlus = document.querySelector(".form-item--count .form-item__btn--plus");
+  var personsCountMinus = document.querySelector(".form-item--count .form-item__btn--minus");
+
+  var area = document.querySelector(".area");
+  var templatePerson = document.querySelector("#travel-template").innerHTML;
+
+  function addPerson() {
+    var div = document.createElement("div");
+    var html = Mustache.render(templatePerson, {
+      "value": parseInt(count.value)
+    });
+
+
+    div.classList.add("persons-item");
+    div.innerHTML = html;
+    area.appendChild(div);
+  }
+
+  personsCountPlus.addEventListener("click", function(event) {
+    event.preventDefault();
+    console.info('добавляем пользователя');
+    count.value = parseInt(count.value);
+    addPerson();
+  });
+
+  personsCountMinus.addEventListener("click", function(event) {
+    event.preventDefault();
+    console.info('удаляем пользователя');
+    area.removeChild(area.lastChild);
+
+  });
+})();
 
 (function() {
   if(!("FormData" in window)){

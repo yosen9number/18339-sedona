@@ -83,7 +83,7 @@
             <label class="form-item__label-tablet required" for="duration">Дней пребывания:</label>
             <div class="form-item__buttons form-item__buttons--days">
               <button class="form-item__btn form-item__btn--minus" type="button">&#8211;</button>
-              <input class="form-item__number" type="number" id="duration" name="duration" min="1" value="1">
+              <input class="form-item__number" type="number" id="duration" name="duration" min="1" value="0">
               <button class="form-item__btn form-item__btn--plus" type="button">+</button>
             </div>
           </div>
@@ -101,53 +101,11 @@
           <label class="form-item__label-tablet required" for="count">Кол-во путешественников:</label>
           <div class="form-item__buttons form-item__buttons--persons">
             <button class="form-item__btn form-item__btn--minus" type="button">&#8211;</button>
-            <input class="form-item__number" type="number" id="count" min="1" value="1">
+            <input class="form-item__number" type="number" id="count" min="1" value="0">
             <button class="form-item__btn form-item__btn--plus" type="button">+</button>
           </div>
-          <div class="persons-item">
-            <div class="persons-item__left">
-              <div class="persons-item__count">
-                <span>№</span>
-                <div>1</div>
-              </div>
-            </div>
-            <div class="persons-item__right">
-              <div class="persons-item__content">
-                <label class="form-item__label required" for="surname1">ФАМИЛИЯ:</label>
-                <input type="text" id="surname1" required>
-              </div>
-              <div class="persons-item__content">
-                <label class="form-item__label required" for="name1">ИМЯ:</label>
-                <input type="text" id="name1" required>
-              </div>
-              <div class="persons-item__content">
-                <label class="form-item__label" for="second-name1">Отчество:</label>
-                <input type="text" id="second-name1">
-              </div>
-            </div>
-          </div><!--persons-item-->
-          <div class="persons-item">
-            <div class="persons-item__left">
-              <div class="persons-item__count">
-                <span>№</span>
-                <div>2</div>
-              </div>
-            </div>
-            <div class="persons-item__right">
-              <div class="persons-item__content">
-                <label class="form-item__label required" for="surname2">ФАМИЛИЯ:</label>
-                <input type="text" id="surname2" required>
-              </div>
-              <div class="persons-item__content">
-                <label class="form-item__label required" for="name2">ИМЯ:</label>
-                <input type="text" id="name2" required>
-              </div>
-              <div class="persons-item__content">
-                <label class="form-item__label" for="second-name2">Отчество:</label>
-                <input type="text" id="second-name2">
-              </div>
-            </div>
-          </div><!--persons-item-->
+          <div class="area">
+          </div>
         </div><!--form-item-->
         </div><!--form-items__content-->
       </div><!--form-items-->
@@ -257,30 +215,29 @@
         <img src="{{image}}" alt="{{name}}">
       </figure>
     </script>
-    <script id="travel-template">
-      <div class="persons-item">
-        <div class="persons-item__left">
+    <script id="travel-template" type="text/html">
+      <div class="persons-item__left">
         <div class="persons-item__count">
         <span>№</span>
-      <div>2</div>
+      <div>{{value}}</div>
       </div>
       </div>
       <div class="persons-item__right">
         <div class="persons-item__content">
-        <label class="form-item__label required" for="surname2">ФАМИЛИЯ:</label>
-      <input type="text" id="surname2" required>
+        <label class="form-item__label required" for="surname{{value}}">ФАМИЛИЯ:</label>
+      <input type="text" id="surname{{value}}" required>
       </div>
       <div class="persons-item__content">
-        <label class="form-item__label required" for="name2">ИМЯ:</label>
-      <input type="text" id="name2" required>
+        <label class="form-item__label required" for="name{{value}}">ИМЯ:</label>
+      <input type="text" id="name{{value}}" required>
       </div>
       <div class="persons-item__content">
-        <label class="form-item__label" for="second-name2">Отчество:</label>
-      <input type="text" id="second-name2">
+        <label class="form-item__label" for="second-name{{value}}">Отчество:</label>
+      <input type="text" id="second-name{{value}}">
         </div>
         </div>
-        </div><!--persons-item-->
     </script>
-    <script src="js/scripts.js"></script>
+    <script src="js/vendors/mustache-2.2.1.min.js"></script>
+    <script src="js/scripts.min.js"></script>
   </body>
 </html>
